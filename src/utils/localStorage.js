@@ -1,11 +1,11 @@
 /*
  * @Author: fenzhou
  * @Date: 2021-05-27 11:42:03
- * @LastEditors: fenzhou
- * @LastEditTime: 2021-05-27 11:43:12
- * @Description: 
+ * @LastEditors: PT
+ * @LastEditTime: 2021-06-17 16:37:48
+ * @Description: 本地localStorage存储
  */
-export const local = {
+export default {
   save: function (key, value) {
     return localStorage.setItem(key, JSON.stringify(value))
   },

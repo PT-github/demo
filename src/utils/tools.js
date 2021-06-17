@@ -1,8 +1,8 @@
 /*
  * @Author: fenzhou
  * @Date: 2021-05-27 17:04:54
- * @LastEditors: fenzhou
- * @LastEditTime: 2021-05-28 16:05:50
+ * @LastEditors: PT
+ * @LastEditTime: 2021-06-17 16:39:48
  * @Description: 
  */
 /**
@@ -12,7 +12,7 @@
  * @param {string} cFormat '{y}.{m}.{d}'
  * @returns {string | null}
  */
-export function parseTime(time, cFormat) {
+function parseTime(time, cFormat) {
   if (arguments.length === 0) {
     return null
   }
@@ -40,7 +40,7 @@ export function parseTime(time, cFormat) {
   }
   const timeStr = format.replace(/{([ymdhisa])+}/g, (result, key) => {
     const value = formatObj[key]
-    if (key === 'a') { return ['日', '一', '二', '三', '四', '五', '六'][value ] }
+    if (key === 'a') { return ['日', '一', '二', '三', '四', '五', '六'][value] }
     return value.toString().padStart(2, '0')
   })
   return timeStr
@@ -53,7 +53,7 @@ export function parseTime(time, cFormat) {
  * @param {string} option '{y}.{m}.{d}'
  * @returns {string}
  */
-export function formatTime(time, option) {
+function formatTime(time, option) {
   if (('' + time).length === 10) {
     time = parseInt(time) * 1000
   } else {
@@ -96,7 +96,7 @@ export function formatTime(time, option) {
  * @param {string} input value
  * @returns {number} output value
  */
-export function byteLength(str) {
+function byteLength(str) {
   // returns the byte length of an utf8 string
   let s = str.length
   for (var i = str.length - 1; i >= 0; i--) {
@@ -114,7 +114,7 @@ export function byteLength(str) {
  * @param {(Object|Array)} source
  * @returns {Object}
  */
-export function objectMerge(target, source) {
+function objectMerge(target, source) {
   if (typeof target !== 'object') {
     target = {}
   }
@@ -137,7 +137,14 @@ export function objectMerge(target, source) {
  * @param {Array} arr
  * @returns {Array}
  */
-export function uniqueArr(arr) {
+function uniqueArr(arr) {
   return Array.from(new Set(arr))
 }
 
+export default {
+  parseTime,
+  formatTime,
+  byteLength,
+  objectMerge,
+  uniqueArr
+}

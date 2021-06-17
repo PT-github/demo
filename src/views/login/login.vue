@@ -2,7 +2,7 @@
  * @Author: PT
  * @Date: 2021-05-28 17:13:37
  * @LastEditors: PT
- * @LastEditTime: 2021-05-28 17:18:55
+ * @LastEditTime: 2021-06-17 17:40:59
  * @Description: file content
 -->
 <template>
@@ -14,6 +14,7 @@
 </template>
 
 <script>
+import { addClass } from '../../utils/dom'
 export default {
   name: '',
   data() {
@@ -24,7 +25,9 @@ export default {
 
   computed: {},
 
-  mounted() {},
+  mounted() {
+    console.log('util', addClass(document.body, 'test'))
+  },
 
   methods: {},
 

@@ -1,8 +1,8 @@
 /*
  * @Author: fenzhou
  * @Date: 2021-05-27 10:51:03
- * @LastEditors: fenzhou
- * @LastEditTime: 2021-05-27 16:56:29
+ * @LastEditors: PT
+ * @LastEditTime: 2021-06-17 16:41:39
  * @Description: 
  */
 
@@ -11,7 +11,7 @@
  * @param {string} path
  * @returns {Boolean}
  */
-export function isExternal(path) {
+function isExternal(path) {
   return /^(https?:|mailto:|tel:)/.test(path)
 }
 
@@ -20,7 +20,7 @@ export function isExternal(path) {
  * @param {string} url
  * @returns {Boolean}
  */
-export function isURL(url) {
+function isURL(url) {
   const reg = /^(https?|ftp):\/\/([a-zA-Z0-9.-]+(:[a-zA-Z0-9.&%$-]+)*@)*((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9][0-9]?)(\.(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])){3}|([a-zA-Z0-9-]+\.)*[a-zA-Z0-9-]+\.(com|edu|gov|int|mil|net|org|biz|arpa|info|name|pro|aero|coop|museum|[a-zA-Z]{2}))(:[0-9]+)*(\/($|[a-zA-Z0-9.,?'\\+&%$#=~_-]+))*$/
   return reg.test(url)
 }
@@ -30,7 +30,7 @@ export function isURL(url) {
  * @param {string} email
  * @returns {Boolean}
  */
-export function isEmail(email) {
+function isEmail(email) {
   const reg = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
   return reg.test(email)
 }
@@ -40,16 +40,16 @@ export function isEmail(email) {
   * @param {*} arg
   * @returns {Boolean}
   */
-export function isMobile (arg) {
+function isMobile(arg) {
   return /^1[3456789]\d{9}$/.test(arg)
 }
- 
+
 /**
   * 电话号码
   * @param {*} arg
   * @returns {Boolean}
   */
-export function isPhone (arg) {
+function isPhone(arg) {
   return /^([0-9]{3,4}-)?[0-9]{7,8}$/.test(arg)
 }
 
@@ -58,7 +58,7 @@ export function isPhone (arg) {
  * @param {string} str
  * @returns {Boolean}
  */
-export function isLowerCase(str) {
+function isLowerCase(str) {
   const reg = /^[a-z]+$/
   return reg.test(str)
 }
@@ -68,7 +68,7 @@ export function isLowerCase(str) {
  * @param {string} str
  * @returns {Boolean}
  */
-export function isUpperCase(str) {
+function isUpperCase(str) {
   const reg = /^[A-Z]+$/
   return reg.test(str)
 }
@@ -78,7 +78,7 @@ export function isUpperCase(str) {
  * @param {string} str
  * @returns {Boolean}
  */
-export function isAlphabets(str) {
+function isAlphabets(str) {
   const reg = /^[A-Za-z]+$/
   return reg.test(str)
 }
@@ -88,7 +88,7 @@ export function isAlphabets(str) {
  * @param {string} str
  * @returns {Boolean}
  */
-export function isString(str) {
+function isString(str) {
   if (typeof str === 'string' || str instanceof String) {
     return true
   }
@@ -100,7 +100,7 @@ export function isString(str) {
  * @param {Array} arg
  * @returns {Boolean}
  */
-export function isArray(arg) {
+function isArray(arg) {
   if (typeof Array.isArray === 'undefined') {
     return Object.prototype.toString.call(arg) === '[object Array]'
   }
@@ -112,7 +112,7 @@ export function isArray(arg) {
  * @param {Number} arg
  * @returns {Boolean}
  */
-export function isNumber (arg) {
+function isNumber(arg) {
   return /^[1-9]\d*$/.test(arg)
 }
 
@@ -121,7 +121,7 @@ export function isNumber (arg) {
  * @param {*} arg
  * @returns {Boolean}
  */
-export function isPrice (arg) {
+function isPrice(arg) {
   return /^\d{0,6}$/.test(arg)
 }
 
@@ -130,7 +130,7 @@ export function isPrice (arg) {
  * @param {*} arg
  * @returns {Boolean}
  */
-export function isCreditCode(arg) {
+function isCreditCode(arg) {
   return /^[A-Z0-9]+$/.test(arg)
 }
 
@@ -139,7 +139,7 @@ export function isCreditCode(arg) {
  * @param {*} arg
  * @returns {Boolean}
  */
-export function isIP(arg) {
+function isIP(arg) {
   return /^(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])$/.test(arg)
 }
 
@@ -148,7 +148,7 @@ export function isIP(arg) {
  * @param {*} arg
  * @returns {Boolean}
  */
-export function isChinese(arg) {
+function isChinese(arg) {
   return /^[\u4E00-\u9FA5]+$/.test(arg)
 }
 
@@ -157,6 +157,25 @@ export function isChinese(arg) {
  * @param {*} arg
  * @returns {Boolean}
  */
-export function isIDCard(arg){
+function isIDCard(arg) {
   return /^[1-9][0-9]{5}([1][9][0-9]{2}|[2][0][0|1][0-9])([0][1-9]|[1][0|1|2])([0][1-9]|[1|2][0-9]|[3][0|1])[0-9]{3}([0-9]|[X])$/.test(arg)
+}
+
+export default {
+  isExternal,
+  isURL,
+  isEmail,
+  isMobile,
+  isPhone,
+  isLowerCase,
+  isUpperCase,
+  isAlphabets,
+  isString,
+  isArray,
+  isNumber,
+  isPrice,
+  isCreditCode,
+  isIP,
+  isChinese,
+  isIDCard
 }

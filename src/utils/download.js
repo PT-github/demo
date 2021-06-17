@@ -1,8 +1,8 @@
 /*
  * @Author: fenzhou
  * @Date: 2021-06-02 10:14:15
- * @LastEditors: fenzhou
- * @LastEditTime: 2021-06-02 10:19:57
+ * @LastEditors: PT
+ * @LastEditTime: 2021-06-17 16:36:17
  * @Description: 
  */
 import { Message } from 'element-ui'
@@ -50,13 +50,13 @@ function download(blob, fileName) {
  * @param json
  * @param fileName
  */
-export const downloadBuffer = (json, fileName, format = '.xls', error = false) => {
+const downloadBuffer = (json, fileName, format = '.xls', error = false) => {
   const data = json.data
   return new Promise((resolve, reject) => {
     const b = new Blob([data])
     const r = new FileReader()
     r.readAsText(b, 'utf-8')
-    r.onload = function() {
+    r.onload = function () {
       if (r.result.indexOf('"successful":false,') === -1) {
         downloadCsv(data, fileName, format)
         resolve(data)
@@ -70,7 +70,7 @@ export const downloadBuffer = (json, fileName, format = '.xls', error = false) =
 }
 
 // 下载word
-export const downloadWord = (json, fileName) => {
+const downloadWord = (json, fileName) => {
   const data = json.data
   return new Promise((resolve) => {
     const b = new Blob([data], { type: 'application/vnd.openxmlformats-officedocument.wodprocessingml.document;charset=utf-8' })
@@ -93,7 +93,7 @@ export const downloadWord = (json, fileName) => {
  * @param data
  * @param fileName
  */
-export const downloadImage = (data, fileName) => {
+const downloadImage = (data, fileName) => {
   const blobSrc = 'data:image/png;base64,' + data
   dataURIToBlob(blobSrc, fileName)
 }
@@ -104,7 +104,9 @@ export const downloadImage = (data, fileName) => {
  * @param data
  * @param fileName
  */
-export const downloadCsv = (data, fileName, format) => {
+const downloadCsv = (data, fileName, format) => {
   const blob = new Blob([data])
   download(blob, fileName + format)
 }
+
+export default { downloadCsv, downloadImage, downloadWord, downloadBuffer }

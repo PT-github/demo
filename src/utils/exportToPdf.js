@@ -2,12 +2,12 @@
  * @Author: fenzhou
  * @Date: 2021-06-02 10:15:44
  * @LastEditors: PT
- * @LastEditTime: 2021-06-07 11:57:20
+ * @LastEditTime: 2021-06-17 16:37:09
  * @Description: 
  */
 import html2canvas from 'html2canvas'
 import jsPDF from 'jspdf'
-export const getPdf = function (htmlTitle) {
+const getPdf = function (htmlTitle) {
   var element = document.getElementById('file')
   html2canvas(element, {
     logging: false
@@ -34,3 +34,5 @@ export const getPdf = function (htmlTitle) {
     pdf.save(htmlTitle)
   })
 }
+
+export default { getPdf }

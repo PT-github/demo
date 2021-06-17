@@ -2,8 +2,8 @@
  * @Author: PT
  * @Date: 2021-05-27 15:53:26
  * @LastEditors: PT
- * @LastEditTime: 2021-05-27 16:36:08
- * @Description: file content
+ * @LastEditTime: 2021-06-17 16:22:50
+ * @Description: 文件是否存在
  */
 
 const fs = require('fs')

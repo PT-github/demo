@@ -1,12 +1,12 @@
 /*
  * @Author: fenzhou
  * @Date: 2021-05-27 11:41:31
- * @LastEditors: fenzhou
- * @LastEditTime: 2021-05-27 15:23:31
- * @Description: 
+ * @LastEditors: PT
+ * @LastEditTime: 2021-06-17 16:38:46
+ * @Description: sessionStorage存储
  */
 
-export const session = {
+export default {
   save: function (key, value) {
     return sessionStorage.setItem(key, JSON.stringify(value))
   },

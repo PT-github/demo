@@ -2,7 +2,7 @@
  * @Author: PT
  * @Date: 2021-05-27 08:49:43
  * @LastEditors: PT
- * @LastEditTime: 2021-06-07 11:41:43
+ * @LastEditTime: 2021-06-16 16:05:37
  * @Description: file content
  */
 const path = require('path')
@@ -40,11 +40,19 @@ module.exports = async function () {
         //   changeOrigin: true,
         //   pathRewrite: { '^/api': '' }
         // }
-      }
+      },
+      stats: 'errors-only'
+      // : {
+      //   moduleAssets: false
+      // }
     },
     externals: config.externals || {},
     optimization: require('./build/optimization'),
     plugins: require('./build/plugins'),
-    output: require('./build/output')
+    output: require('./build/output'),
+    // stats: 'errors-warnings'
+    // stats: {
+    //   moduleAssets: false
+    // }
   }
 }

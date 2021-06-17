@@ -2,7 +2,7 @@
  * @Author: PT
  * @Date: 2021-05-28 17:10:52
  * @LastEditors: PT
- * @LastEditTime: 2021-05-28 17:17:37
+ * @LastEditTime: 2021-06-17 16:17:09
  * @Description: file content
  */
 import Vue from 'vue'
@@ -15,8 +15,8 @@ Vue.use(Router)
 //   return originalPush.call(this, location).catch(err => err)
 // }
 
-import Test from '@/views/test/test'
-import Login from '@/views/login/login'
+// import Test from '@/views/test/test'
+// import Login from '@/views/login/login'
 
 const router = new Router({
   mode: 'history',
@@ -27,12 +27,12 @@ const router = new Router({
     {
       path: '/test',
       name: 'Test',
-      component: Test,
+      component: () => import(/* webpackChunkName: 'Test' */'@/views/test/test'),
     },
     {
       path: '/login',
       name: 'Login',
-      component: Login,
+      component: () => import(/* webpackChunkName: 'Login' */'@/views/login/login'),
     },
   ]
 })

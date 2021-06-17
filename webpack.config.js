@@ -2,7 +2,7 @@
  * @Author: PT
  * @Date: 2021-05-27 08:49:43
  * @LastEditors: PT
- * @LastEditTime: 2021-06-17 15:01:50
+ * @LastEditTime: 2021-06-17 16:15:01
  * @Description: file content
  */
 const path = require('path')
@@ -47,12 +47,18 @@ module.exports = async function () {
     optimization: require('./build/optimization'),
     plugins: require('./build/plugins'),
     output: require('./build/output'),
-    // stats: 'errors-warnings'
+    // stats: 'verbose',
     // 设置缓存，改善构建速度
     cache: {
       type: 'filesystem',
       buildDependencies: {
         config: [__filename]
+      }
+    },
+    performance: {
+      // 排除第三方插件大小超过250kb限制提示
+      assetFilter: function (assetFilename) {
+        return !/\/vendor\./.test(assetFilename)
       }
     }
   }

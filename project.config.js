@@ -2,7 +2,7 @@
  * @Author: PT
  * @Date: 2021-05-27 10:23:03
  * @LastEditors: PT
- * @LastEditTime: 2021-05-28 11:01:56
+ * @LastEditTime: 2021-06-21 10:57:20
  * @Description: file content
  */
 const path = require('path')
@@ -28,7 +28,9 @@ let config = {
 
   projectRoot: path.resolve(__dirname, './'), // 项目根目录
 
-  externals: {} // 外部扩展，不需要打包
+  externals: {}, // 外部扩展，不需要打包
+
+  compress: true // 是否开启gzip压缩（开启可以减少服务器压力-压缩gizp时间，但是会增加构建时间）
 
 }
 config.publicPath += (config.pubProjectName ? config.pubProjectName + '/' : '')

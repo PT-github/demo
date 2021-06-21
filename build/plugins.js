@@ -2,7 +2,7 @@
  * @Author: PT
  * @Date: 2021-05-27 11:48:07
  * @LastEditors: PT
- * @LastEditTime: 2021-05-28 17:08:09
+ * @LastEditTime: 2021-06-21 10:59:06
  * @Description: file content
  */
 const path = require('path')
@@ -12,6 +12,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const { VueLoaderPlugin } = require('vue-loader')
+const CompressionPlugin = require('compression-webpack-plugin')
 const config = require('../project.config')
 const fs = require('fs')
 
@@ -59,6 +60,10 @@ let prodPlugins = [
     chunkFilename: config.isDevelopment
       ? '[name].css'
       : 'styles/[name].[chunkhash:7].css'
+  }),
+  // gzip压缩
+  new CompressionPlugin({
+    filename: '[path][base].gz',
   })
 ]
 // 判断public目录下是否有文件

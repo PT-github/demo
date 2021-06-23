@@ -2,7 +2,7 @@
  * @Author: PT
  * @Date: 2021-05-27 08:49:43
  * @LastEditors: PT
- * @LastEditTime: 2021-06-21 10:52:55
+ * @LastEditTime: 2021-06-23 17:31:52
  * @Description: file content
  */
 const path = require('path')
@@ -42,7 +42,11 @@ module.exports = async function () {
         //   pathRewrite: { '^/api': '' }
         // }
       },
-      stats: 'errors-only'
+      stats: {
+        normal: true,
+        builtAt: true,
+        colors: true
+      }
     },
     externals: config.externals || {},
     optimization: require('./build/optimization'),

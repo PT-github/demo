@@ -2,7 +2,7 @@
  * @Author: fenzhou
  * @Date: 2021-06-02 10:14:15
  * @LastEditors: PT
- * @LastEditTime: 2021-06-17 16:36:17
+ * @LastEditTime: 2021-06-23 18:51:03
  * @Description: 
  */
 import { Message } from 'element-ui'
@@ -109,4 +109,4 @@ const downloadCsv = (data, fileName, format) => {
   download(blob, fileName + format)
 }
 
-export default { downloadCsv, downloadImage, downloadWord, downloadBuffer }
+export { downloadCsv, downloadImage, downloadWord, downloadBuffer }

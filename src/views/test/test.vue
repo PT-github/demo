@@ -2,7 +2,7 @@
  * @Author: PT
  * @Date: 2021-05-28 17:13:32
  * @LastEditors: PT
- * @LastEditTime: 2021-06-17 17:05:26
+ * @LastEditTime: 2021-06-23 18:59:59
  * @Description: file content
 -->
 <template>
@@ -10,29 +10,40 @@
     <div class="color">测试</div>
     <router-link to="/test">测试</router-link>
     <router-link to="/login">登陆</router-link>
+    <input
+      type="text"
+      v-model="value"
+    >
   </div>
 </template>
 
 <script>
-// import utils from '../../utils'
-import { addClass } from '../../utils/dom'
-// import { get } from '../../utils/cookie'
+import { get, remove } from '../../utils/cookie'
 export default {
-  name: '',
+  name: 'Test',
   data() {
-    return {}
+    return {
+      foo: null
+    }
   },
 
   components: {},
 
-  computed: {},
-
-  mounted() {
-    // console.log('util', utils.cookie.get('aaa'))
-    console.log('util', addClass(document.body, 'test'))
+  computed: {
+    foo() {
+      return null
+    }
   },
 
-  methods: {},
+  mounted() {
+    var test_atb_c = ''
+    console.log('util', get('aaa'), test_atb_c)
+    // console.log('util', addClass(document.body, 'test'))
+  },
+
+  methods: {
+    foo() {}
+  },
 
   watch: {}
 }

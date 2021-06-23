@@ -2,7 +2,7 @@
  * @Author: fenzhou
  * @Date: 2021-05-27 17:04:54
  * @LastEditors: PT
- * @LastEditTime: 2021-06-17 16:39:48
+ * @LastEditTime: 2021-06-23 18:54:09
  * @Description: 
  */
 /**
@@ -141,7 +141,7 @@ function uniqueArr(arr) {
   return Array.from(new Set(arr))
 }
 
-export default {
+export {
   parseTime,
   formatTime,
   byteLength,

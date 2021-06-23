@@ -2,7 +2,7 @@
  * @Author: fenzhou
  * @Date: 2021-06-02 10:15:44
  * @LastEditors: PT
- * @LastEditTime: 2021-06-17 16:37:09
+ * @LastEditTime: 2021-06-23 18:51:24
  * @Description: 
  */
 import html2canvas from 'html2canvas'
@@ -35,4 +35,4 @@ const getPdf = function (htmlTitle) {
   })
 }
 
-export default { getPdf }
+export { getPdf }

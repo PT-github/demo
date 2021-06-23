@@ -2,7 +2,7 @@
  * @Author: PT
  * @Date: 2021-06-07 09:31:13
  * @LastEditors: PT
- * @LastEditTime: 2021-06-17 16:57:14
+ * @LastEditTime: 2021-06-23 18:51:34
  * @Description: file content
  */
 
@@ -16,15 +16,15 @@
 //     Vue.prototype['$' + keyArr.join('.').replace(/\.js$/g, '')] = UITI_FILES(filePath)
 //   }
 // })
-const UITI_FILES = require.context('./', false, /\.js$/)
-const UTILS = {}
+// const UITI_FILES = require.context('./', false, /\.js$/)
+// const UTILS = {}
 
-UITI_FILES.keys().forEach(filePath => {
-  if (/(?<!\/index\.js)$/.test(filePath)) {
-    const keyArr = filePath.split('/')
-    keyArr.shift() // 移除首项
-    UTILS[keyArr.join('.').replace(/\.js$/g, '')] = UITI_FILES(filePath).default
-  }
-})
+// UITI_FILES.keys().forEach(filePath => {
+//   if (/(?<!\/index\.js)$/.test(filePath)) {
+//     const keyArr = filePath.split('/')
+//     keyArr.shift() // 移除首项
+//     UTILS[keyArr.join('.').replace(/\.js$/g, '')] = UITI_FILES(filePath).default
+//   }
+// })
 
-export default UTILS
+// export default UTILS

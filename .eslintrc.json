@@ -4,12 +4,22 @@
     "es2021": true,
     "node": true
   },
-  "extends": ["eslint:recommended", "plugin:vue/essential"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:vue/essential"
+  ],
+  "parser": "vue-eslint-parser",
   "parserOptions": {
     "ecmaVersion": 12,
-    "sourceType": "module"
+    "sourceType": "module",
+    "allowImportExportEverywhere": false,
+    "ecmaFeatures": {
+      "jsx": true
+    }
   },
-  "plugins": ["vue"],
+  "plugins": [
+    "vue"
+  ],
   "rules": {
     // 三等号
     "eqeqeq": "error",

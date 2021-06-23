@@ -2,7 +2,7 @@
  * @Author: PT
  * @Date: 2021-05-28 16:24:23
  * @LastEditors: PT
- * @LastEditTime: 2021-06-17 18:24:39
+ * @LastEditTime: 2021-06-23 19:05:10
  * @Description: file content
  */
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
@@ -15,7 +15,7 @@ module.exports = {
   ],
   splitChunks: {
     chunks: 'all', // async表示抽取异步模块，all表示对所有模块生效，initial表示对同步模块生效
-    minSize: 0,
+    minSize: 20000, // 抽离的文件最小大小
     minRemainingSize: 0,
     minChunks: 1,
     maxAsyncRequests: 30,

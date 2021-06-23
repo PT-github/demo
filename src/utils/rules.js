@@ -17,7 +17,7 @@ export default {
   companynumber: /^\d{5}-\d{4}$|^\d{4}-\d{8}$|^\d{4}-\d{7}$|^\d{4}$/,
   companynumberone: /^\d{3,5}-\d{4,8}|\d{4}|\d{11}$/,
   phoneNumber: /^(^1[3|4|5|7|8]\d{9})|(\d{3}-\d{8}|\d{4}-\d{x7})$/,
-  datatime: /^\-\d+$/,
+  datatime: /^-\d+$/,
   email: /^[A-Za-z\d]+([-_.][A-Za-z\d]+)*@([A-Za-z\d]+[-.])+[A-Za-z\d]{2,4}$/, // 邮箱验证
   // integer: /^[+]{0}(\d+)\d+(\.\d*)?$/                                       //正整数验证
   integer: /^[1-9]\d*$/,

@@ -2,7 +2,7 @@
  * @Author: PT
  * @Date: 2021-05-27 11:48:07
  * @LastEditors: PT
- * @LastEditTime: 2021-06-21 10:59:06
+ * @LastEditTime: 2021-06-23 19:18:50
  * @Description: file content
  */
 const path = require('path')
@@ -13,6 +13,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const { VueLoaderPlugin } = require('vue-loader')
 const CompressionPlugin = require('compression-webpack-plugin')
+const ESLintPlugin = require('eslint-webpack-plugin')
 const config = require('../project.config')
 const fs = require('fs')
 
@@ -51,6 +52,10 @@ let plugins = [
     title: ''
   }),
   new CleanWebpackPlugin(),
+  new ESLintPlugin({
+    extensions: ['.js', '.vue'],
+    failOnError: false
+  })
 ]
 // 生产环境 添加的plugin
 let prodPlugins = [

@@ -37,7 +37,7 @@ function removeClass(ele, cls) {
   }
 }
 
-export default {
+export {
   hasClass,
   addClass,
   removeClass

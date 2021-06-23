@@ -2,7 +2,7 @@
  * @Author: fenzhou
  * @Date: 2021-05-27 10:50:51
  * @LastEditors: PT
- * @LastEditTime: 2021-06-17 17:04:22
+ * @LastEditTime: 2021-06-23 16:19:48
  * @Description: 
  */
 
@@ -37,7 +37,7 @@ function removeClass(ele, cls) {
   }
 }
 
-export {
+export default {
   hasClass,
   addClass,
   removeClass

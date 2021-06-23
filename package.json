@@ -36,6 +36,7 @@
     "eslint-webpack-plugin": "^2.5.4",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.1",
+    "husky": "^6.0.0",
     "less": "^4.1.1",
     "less-loader": "^9.0.0",
     "mini-css-extract-plugin": "^1.6.0",

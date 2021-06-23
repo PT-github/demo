@@ -2,7 +2,7 @@
  * @Author: PT
  * @Date: 2021-05-27 11:48:07
  * @LastEditors: PT
- * @LastEditTime: 2021-06-23 19:18:50
+ * @LastEditTime: 2021-06-23 19:44:06
  * @Description: file content
  */
 const path = require('path')
@@ -51,7 +51,6 @@ let plugins = [
     inject: true,
     title: ''
   }),
-  new CleanWebpackPlugin(),
   new ESLintPlugin({
     extensions: ['.js', '.vue'],
     failOnError: false
@@ -59,6 +58,8 @@ let plugins = [
 ]
 // 生产环境 添加的plugin
 let prodPlugins = [
+  // 清空打包目录
+  new CleanWebpackPlugin(),
   // css抽离
   new MiniCssExtractPlugin({
     filename: config.isDevelopment ? '[name].css' : 'styles/[name].[hash:7].css',

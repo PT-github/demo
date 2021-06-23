@@ -2,7 +2,7 @@
  * @Author: PT
  * @Date: 2021-05-27 08:49:43
  * @LastEditors: PT
- * @LastEditTime: 2021-06-23 17:31:52
+ * @LastEditTime: 2021-06-23 19:43:15
  * @Description: file content
  */
 const path = require('path')
@@ -26,6 +26,7 @@ module.exports = async function () {
       host: '0.0.0.0',
       publicPath: '/',
       port,
+      open: true,
       contentBase: path.join(__dirname, 'dist'),
       // 开启gzip压缩 减少服务器压缩gzip时间
       compress: true,

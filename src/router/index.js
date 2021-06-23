@@ -2,7 +2,7 @@
  * @Author: PT
  * @Date: 2021-05-28 17:10:52
  * @LastEditors: PT
- * @LastEditTime: 2021-06-23 18:31:56
+ * @LastEditTime: 2021-06-23 19:41:32
  * @Description: file content
  */
 import Vue from 'vue'
@@ -34,11 +34,11 @@ const router = new Router({
       name: 'Login',
       component: () => import(/* webpackChunkName: 'Login' */'@/views/login/login'),
     },
-    // {
-    //   path: '/login2',
-    //   name: 'Login2',
-    //   component: () => import(/* webpackChunkName: 'Login2' */'@/views/login/login2'),
-    // },
+    {
+      path: '/login2',
+      name: 'Login2',
+      component: () => import(/* webpackChunkName: 'Login2' */'@/views/login/login2'),
+    },
   ]
 })
 export default router

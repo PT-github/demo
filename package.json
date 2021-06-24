@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "prepare": "husky install",
     "dev": "cross-env ENV_CONFIG=dev ENV_MODE=development webpack serve --progress --color",
     "build:dev": "cross-env ENV_CONFIG=dev ENV_MODE=development webpack --progress --color",
     "test": "cross-env ENV_CONFIG=test ENV_MODE=development webpack --progress --color",

@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "api": "node ./bin/api.js",
     "prepare": "husky install",
     "dev": "cross-env ENV_CONFIG=dev ENV_MODE=development webpack serve --progress --color",
     "build:dev": "cross-env ENV_CONFIG=dev ENV_MODE=development webpack --progress --color",
@@ -53,6 +54,7 @@
     "vue-loader": "^15.9.7",
     "vue-template-compiler": "^2.6.12",
     "webpack": "^5.37.1",
+    "webpack-cdn-plugin": "^3.3.1",
     "webpack-cli": "^4.7.0",
     "webpack-dev-server": "^3.11.2"
   },

@@ -12,8 +12,8 @@
     "build:test": "cross-env ENV_CONFIG=test ENV_MODE=development webpack --progress --color",
     "prod": "cross-env ENV_CONFIG=pro ENV_MODE=production webpack serve --progress --color",
     "build": "cross-env ENV_CONFIG=pro ENV_MODE=production webpack --progress --color",
-    "lint": "eslint src --ext .js,.vue",
-    "fix": "eslint --fix --fix-type layout --fix-type suggestion src --ext .js,.vue"
+    "lint": "eslint . --ext .js,.vue",
+    "fix": "eslint --fix --fix-type layout --fix-type suggestion . --ext .js,.vue"
   },
   "keywords": [],
   "author": "",

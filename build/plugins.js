@@ -1,15 +1,15 @@
 /*
  * @Author: PT
  * @Date: 2021-05-27 11:48:07
- * @LastEditors: fenzhou
- * @LastEditTime: 2021-06-30 09:42:57
+ * @LastEditors: PT
+ * @LastEditTime: 2021-07-06 17:15:16
  * @Description: file content
  */
 const path = require('path')
 const webpack = require('webpack')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const WebpackCdnPlugin = require('webpack-cdn-plugin')
+// const WebpackCdnPlugin = require('webpack-cdn-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const { VueLoaderPlugin } = require('vue-loader')
@@ -17,6 +17,7 @@ const CompressionPlugin = require('compression-webpack-plugin')
 const ESLintPlugin = require('eslint-webpack-plugin')
 const config = require('../project.config')
 const fs = require('fs')
+const MyPlugin = require('./MyPlugin')
 
 /**
  * 路径下是否包含文件
@@ -51,45 +52,47 @@ let plugins = [
     favicon: path.resolve(config.projectRoot, 'src/assets/images/favicon.ico'),
     inject: true,
     title: '',
-    cdnModule: 'devq'
+    cdnModule: 'devq' // config.env
   }),
+  /* config.plugin('MyPlugin') for inject js and css from the other system */
+  new MyPlugin(config.resources),
   new ESLintPlugin({
     extensions: ['.js', '.vue'],
     failOnError: false
   }),
-  new WebpackCdnPlugin({
-    modules: {
-      'dev': [
-        { name: 'vue', var: 'Vue', path: 'dist/vue.min.js' },
-        { name: 'vue-router',            var: 'VueRouter',            path: 'dist/vue-router.min.js'}
-      ],
-      'devq':[{
-        name: 'vuex',
-        var: 'Vuex',
-        path: 'dist/vuex.min.js'
-      }]
-    },
-    // [
-    //   {
-    //     name: 'vue',
-    //     var: 'Vue',
-    //     path: 'dist/vue.runtime.min.js'
-    //   },
-    //   {
-    //     name: 'vue-router',
-    //     var: 'VueRouter',
-    //     path: 'dist/vue-router.min.js'
-    //   },
-    //   {
-    //     name: 'vuex',
-    //     var: 'Vuex',
-    //     path: 'dist/vuex.min.js'
-    //   }
-    // ],
-    // When you set prod:false, it will output urls using publicPath, so you might need to expose it as some sort of static route.
-    prod: false,
-    publicPath: 'https://abc.com'
-  })
+  // new WebpackCdnPlugin({
+  //   modules: {
+  //     'dev': [
+  //       { name: 'vue', var: 'Vue', path: 'dist/vue.min.js' },
+  //       { name: 'vue-router',            var: 'VueRouter',            path: 'dist/vue-router.min.js'}
+  //     ],
+  //     'devq':[{
+  //       name: 'vuex',
+  //       var: 'Vuex',
+  //       path: 'dist/vuex.min.js'
+  //     }]
+  //   },
+  //   // [
+  //   //   {
+  //   //     name: 'vue',
+  //   //     var: 'Vue',
+  //   //     path: 'dist/vue.runtime.min.js'
+  //   //   },
+  //   //   {
+  //   //     name: 'vue-router',
+  //   //     var: 'VueRouter',
+  //   //     path: 'dist/vue-router.min.js'
+  //   //   },
+  //   //   {
+  //   //     name: 'vuex',
+  //   //     var: 'Vuex',
+  //   //     path: 'dist/vuex.min.js'
+  //   //   }
+  //   // ],
+  //   // When you set prod:false, it will output urls using publicPath, so you might need to expose it as some sort of static route.
+  //   prod: false,
+  //   publicPath: 'https://abc.com'
+  // })
 ]
 // 生产环境 添加的plugin
 let prodPlugins = [

@@ -2,7 +2,7 @@
  * @Author: PT
  * @Date: 2021-05-27 10:23:03
  * @LastEditors: PT
- * @LastEditTime: 2021-07-05 18:05:05
+ * @LastEditTime: 2021-07-08 16:40:08
  * @Description: file content
  */
 const path = require('path')
@@ -29,20 +29,24 @@ let config = {
   projectRoot: path.resolve(__dirname, './'), // 项目根目录
 
   // 外部资源模块（all是所有环境都会引入；dev/test/pro配置根据环境引入配置的资源）
-  // resources: {
-  //   all: {
-  //     js: [ 'www.all.com/js' ],
-  //     css: [ 'www.all.com/css' ]
-  //   },
-  //   dev: {
-  //     js: [ 'www.dev.com/js' ],
-  //     css: [ 'www.dev.com/css' ]
-  //   },
-  //   pro: {
-  //     js: [ 'www.pro.com/js' ],
-  //     css: [ 'www.pro.com/css' ]
-  //   }
-  // },
+  resources: {
+    all: [
+      {
+        name: 'vueBBB',
+        var: 'Vue',
+        path: 'https://cdn.jsdelivr.net/npm/vue@2.6/dist/vue.min.js',
+      },
+      {
+        name: 'element-ui-ddd',
+        var: 'ELEMENT',
+        path: 'https://unpkg.com/element-ui/lib/index.js',
+        style: 'https://unpkg.com/element-ui/lib/theme-chalk/index.css'
+      },
+    ],
+    dev: [],
+    test: [],
+    pro: []
+  },
 
   externals: {}, // 外部扩展，不需要打包
 

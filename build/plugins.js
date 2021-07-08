@@ -2,7 +2,7 @@
  * @Author: PT
  * @Date: 2021-05-27 11:48:07
  * @LastEditors: PT
- * @LastEditTime: 2021-07-06 17:15:16
+ * @LastEditTime: 2021-07-08 10:45:51
  * @Description: file content
  */
 const path = require('path')
@@ -51,8 +51,7 @@ let plugins = [
     template: path.resolve(config.projectRoot, 'index.html'),
     favicon: path.resolve(config.projectRoot, 'src/assets/images/favicon.ico'),
     inject: true,
-    title: '',
-    cdnModule: 'devq' // config.env
+    title: ''
   }),
   /* config.plugin('MyPlugin') for inject js and css from the other system */
   new MyPlugin(config.resources),

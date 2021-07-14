@@ -2,7 +2,7 @@
  * @Author: PT
  * @Date: 2021-05-28 17:13:32
  * @LastEditors: PT
- * @LastEditTime: 2021-06-23 18:59:59
+ * @LastEditTime: 2021-07-14 09:20:43
  * @Description: file content
 -->
 <template>
@@ -18,9 +18,9 @@
 </template>
 
 <script>
-import { get, remove } from '../../utils/cookie'
+// import { get, remove } from '../../utils/cookie'
 export default {
-  name: 'Test',
+  name: 'User',
   data() {
     return {
       foo: null
@@ -30,19 +30,19 @@ export default {
   components: {},
 
   computed: {
-    foo() {
-      return null
-    }
+    // foo() {
+    //   return null
+    // }
   },
 
   mounted() {
-    var test_atb_c = ''
-    console.log('util', get('aaa'), test_atb_c)
+    // var test_atb_c = ''
+    // console.log('util', get('aaa'), test_atb_c)
     // console.log('util', addClass(document.body, 'test'))
   },
 
   methods: {
-    foo() {}
+    // foo() {}
   },
 
   watch: {}

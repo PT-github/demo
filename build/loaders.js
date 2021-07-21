@@ -18,6 +18,7 @@ let urlLoader = [
     loader: 'url-loader',
     options: {
       limit: 1,
+      esModule: false,
       name: path.posix.join(config.staticPath,
         'images/[name].[hash:7].[ext]')
     }

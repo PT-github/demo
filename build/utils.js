@@ -37,6 +37,7 @@ exports.cssLoaders = function () {
         options: {
           resources: [
             path.resolve(__dirname, `../src/assets/styles/_variable.${ext}`),
+            path.resolve(__dirname, '../src/assets/styles/common/_handle.scss')
           ]
         }
       })

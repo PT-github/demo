@@ -1,0 +1,21 @@
+.s-select {
+  .el-input__inner{
+    @include border_color($color: '$1-color-1', $opacity:.15);
+    @include font_color($color: '$1-color-1', $opacity:.65);
+    @include placeholder_color($color: "$1-color-1", $opacity: .25);
+    border-radius: 2px;
+  }
+  .el-input.is-focus .el-input__inner{
+    @include border_color($color: '$2-color-1');
+  }
+  .el-tag {
+    @include background_color($color: '$1-color-1', $opacity: .04);
+    @include border_color($color: '$1-color-1', $opacity:.15);
+    @include font_color($color: '$1-color-1', $opacity:.65);
+    border-radius: 2px;
+  }
+  .el-tag__close.el-icon-close {
+    background-color: transparent;
+    @include font_color($color: '$1-color-1', $opacity:.65);
+  }
+}

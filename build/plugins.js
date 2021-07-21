@@ -2,7 +2,7 @@
  * @Author: PT
  * @Date: 2021-05-27 11:48:07
  * @LastEditors: PT
- * @LastEditTime: 2021-07-08 10:45:51
+ * @LastEditTime: 2021-07-14 09:54:21
  * @Description: file content
  */
 const path = require('path')
@@ -59,6 +59,8 @@ let plugins = [
     extensions: ['.js', '.vue'],
     failOnError: false
   }),
+  // 清空打包目录
+  new CleanWebpackPlugin(),
   // new WebpackCdnPlugin({
   //   modules: {
   //     'dev': [
@@ -95,8 +97,6 @@ let plugins = [
 ]
 // 生产环境 添加的plugin
 let prodPlugins = [
-  // 清空打包目录
-  new CleanWebpackPlugin(),
   // css抽离
   new MiniCssExtractPlugin({
     filename: config.isDevelopment ? '[name].css' : 'styles/[name].[hash:7].css',

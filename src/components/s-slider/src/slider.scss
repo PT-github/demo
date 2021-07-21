@@ -1,0 +1,6 @@
+.el-slider__bar{
+  @include background_color("$2-color-1");
+}
+.el-slider__button{
+  @include border_color("$2-color-1");
+}

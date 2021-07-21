@@ -2,7 +2,7 @@
  * @Author: PT
  * @Date: 2021-05-27 16:37:06
  * @LastEditors: PT
- * @LastEditTime: 2021-06-07 17:18:31
+ * @LastEditTime: 2021-07-14 18:32:34
  * @Description: file content
 -->
 <template>
@@ -24,7 +24,7 @@ export default {
   computed: {},
 
   mounted() {
-    console.log(this, '[0000]')
+    // console.log(this, '[0000]')
   },
 
   methods: {},

@@ -1,0 +1,113 @@
+@import "../../s-form/src/form.scss";
+@import "../../s-form/src/form-item.scss";
+
+.s-form-con {
+  &.el-form--inline {
+    .el-form-item {
+      margin-right: 0;
+      display: inline-flex;
+      .el-form-item__content {
+        flex: 1;
+      }
+      &.form-item-query-btn {
+        float: right;
+        text-align: right;
+      }
+    }
+    &:after {
+      display: table;
+      content: "";
+      clear: both;
+    }
+  }
+  .el-form-item__content {
+    line-height: 0;
+    .field_text {
+      line-height: 40px;
+    }
+    .el-input-number, .s-select-con, .s-cascader, .s-time-select, .s-time-picker, .s-date-picker {
+      width: 100%;
+    }
+    .s-radio-group {
+      padding-top: 12px;
+    }
+    .s-radio-con_button {
+      padding: 0;
+    }
+    .s-checkbox-con {
+      padding-top: 9px;
+    }
+    .s-rate, .s-switch {
+      padding-top: 10px;
+    }
+    .el-slider__runway {
+      margin: 17px 0;
+    }
+  }
+  .el-form-item--medium {
+    .el-form-item__content {
+      line-height: 0;
+      .field_text {
+        line-height: 36px;
+      }
+      .s-radio-group:not(.s-radio-con_button) {
+        padding-top: 10px;
+      }
+      .s-checkbox-con {
+        padding-top: 7px;
+      }
+      .s-rate, .s-switch {
+        padding-top: 8px;
+      }
+      .el-slider__runway {
+        margin: 14px 0;
+      }
+    }
+  }
+  .el-form-item--small {
+    .el-form-item__content {
+      line-height: 0;
+      .field_text {
+        line-height: 32px;
+      }
+      .s-radio-group:not(.s-radio-con_button) {
+        padding-top: 6px;
+      }
+      .s-checkbox-con {
+        padding-top: 3px;
+      }
+      .s-rate, .s-switch {
+        padding-top: 6px;
+      }
+      .el-slider__runway {
+        margin: 13px 0;
+      }
+    }
+  }
+  .el-form-item--mini {
+    .el-form-item__content {
+      line-height: 0;
+      .field_text {
+        line-height: 28px;
+      }
+      .s-radio-group:not(.s-radio-con_button) {
+        padding-top: 7px;
+      }
+      .s-checkbox-con {
+        padding-top: 5px;
+      }
+      .s-rate, .s-switch {
+        padding-top: 4px;
+      }
+      .el-slider__runway {
+        margin: 11px 0;
+      }
+    }
+  }
+  .query-form-enter-active, .query-form-leave-active {
+    transition: opacity .3s;
+  }
+  .query-form-enter, .query-form-leave-to /* .query-form-leave-active below version 2.1.8 */ {
+    opacity: 0;
+  }
+}

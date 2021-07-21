@@ -1,0 +1,390 @@
+$mixHeight: 200px;
+$maxHeight: 300px;
+.s-menu-con {
+  .el-menu-item i, .el-submenu__title i {
+    @include font_color($color: '$1-color-1', $opacity: .65);
+  }
+  .el-menu {
+    border-right: none;
+    &.el-menu--horizontal {
+      border-bottom: none;
+    }
+  }
+  .el-menu--horizontal {
+    > .el-menu-item {
+      border-bottom: none;
+      font-size: 18px;
+      padding: 0 20px;
+      @include font_color($color: '$1-color-1', $opacity: .65);
+    }
+    > .el-submenu {
+      .el-submenu__title {
+        border-bottom: none;
+        font-size: 18px;
+        padding: 0 20px;
+        @include font_color($color: '$1-color-1', $opacity: .65);
+      }
+      .el-submenu__icon-arrow {
+        font-size: 12px;
+      }
+    }
+    .el-menu-item {
+      &:not(.is-disabled) {
+        &:focus, &:hover, &.is-active {
+          @include font_color($color: '$2-color-1');
+        i {
+          @include font_color($color: '$2-color-1');
+        }
+        }
+      }
+    }
+    > .el-submenu:focus, > .el-submenu:hover {
+      .el-submenu__title {
+        @include font_color($color: '$2-color-1');
+        i {
+          @include font_color($color: '$2-color-1');
+        }
+      }
+    }
+  }
+  
+  &.s-menu-con--dark {
+    @include font_color($color: '$0-color-1');
+  }
+
+  // 垂直样式
+  .s-menu-vertical {
+    width: 256px;
+    &.el-menu--collapse {
+      width: 64px;
+    }
+    .el-menu-item {
+      padding: 0 18px 0 26px;
+      font-size: 16px;
+      transition: color .2s;
+      height: 56px;
+      line-height: 56px;
+      i {
+        vertical-align: baseline;
+      }
+      span {
+        vertical-align: baseline;
+      }
+      &:focus {
+        background: none;
+      }
+      &:hover, &.is-active {
+        @include font_color($color: '$2-color-1');
+        @include background_color($color: '$2-color-2');
+        i {
+          transition: color .2s;
+          @include font_color($color: '$2-color-1');
+        }
+      }
+    }
+    .el-submenu__title {
+      font-size: 16px;
+      transition: color .2s;
+      i {
+        transition: color .2s;
+        vertical-align: baseline;
+      }
+      > span {
+        vertical-align: baseline;
+      }
+      &:hover, &:focus {
+        @include font_color($color: '$2-color-1');
+        @include background_color($color: '$2-color-2');
+        i {
+          @include font_color($color: '$2-color-1');
+          @include background_color($color: '$2-color-2');
+        }
+      }
+    }
+    &.el-menu--collapse>.el-submenu>.el-submenu__title [class^=el-icon-] {
+      vertical-align: baseline;
+    }
+  }
+  
+}
+.s-menu-popup {
+  .el-menu-item .el-submenu__icon-arrow {
+    font-size: 12px;
+  }
+  .el-menu-item i {
+    @include font_color($color: '$1-color-1', $opacity: .65);
+  }
+  .el-menu--popup-bottom-start {
+    margin-top: 0;
+  }
+  .el-menu--popup {
+    border-radius: 0px 0px 4px 4px;
+    @include background_color($color: '$0-color-1');
+    @include themeify {
+      box-shadow: 0px 1px 4px 0px themed($key: '$1-color-6', $opacity: .24);
+    }
+  }
+  &.el-menu--horizontal .el-menu .el-menu-item, &.el-menu--horizontal .el-menu .el-submenu__title {
+    line-height: 56px;
+    height: 56px;
+    font-size: 16px;
+    padding: 0 20px;
+    @include background_color($color: '$0-color-1');
+    @include font_color($color: '$1-color-1', $opacity: .65);
+  }
+  &.el-menu--horizontal .el-menu-item {
+    &:not(.is-disabled) {
+      &:focus, &:hover, &.is-active {
+        @include font_color($color: '$2-color-1');
+        @include background_color($color: '$2-color-2');
+        i {
+          @include font_color($color: '$2-color-1');
+        }
+      }
+    }
+  }
+  &.s-menu-popup--3 {
+    max-height: $maxHeight;
+    min-height: $mixHeight;
+    .el-menu {
+      column-count: 4; //多列的列数
+      column-gap: 30px;//列间距
+      padding: 0 22px;
+    }
+    .nav-group {
+      break-inside: avoid;
+      margin-bottom: 10px;
+      > .el-menu-item {
+        border-style: solid;
+        border-width: 0 0 1px;
+        line-height: 55px;
+        @include border_color($color: '$1-color-7');
+      }
+      .nav-group-sub {
+        .el-menu-item {
+          font-size: 14px;
+        }
+      }
+    }
+    .el-menu-item:not(.is-disabled):focus,
+    .el-menu-item:not(.is-disabled):hover,
+    .el-menu-item:not(.is-disabled).is-active {
+      background: none;
+    }
+  }
+  &.s-menu-popup--4, &.s-menu-popup--5 {
+    .el-menu-item i {
+      vertical-align: baseline;
+    }
+    .el-menu {
+      display: flex;
+      padding: 0;
+    }
+    .nav-search {
+      flex: 1;
+      @include background_color($color: '$1-color-8');
+      padding: 16px 32px 16px;
+      max-height: $maxHeight;
+      min-height: $mixHeight;
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+      .search-content {
+        flex: 1;
+        overflow-y: auto;
+      }
+      .nav-group {
+        padding: 16px 16px 0;
+        .menu-icon {
+          margin-right: 5px;
+        }
+        .nav-item {
+          cursor: pointer;
+          line-height: 40px;
+          font-size: 14px;
+          @include font_color($color: '$1-color-1', $opacity: .65);
+          &:hover, &:focus, &.is-active {
+            @include font_color($color: '$2-color-1');
+          }
+        }
+        > .nav-item {
+          font-size: 16px;
+          border-style: solid;
+          border-width: 0 0 1px;
+          @include border_color($color: '$1-color-7');
+        }
+        .nav-group_sub {
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          .nav-item {
+            width: 30%;
+          }
+        }
+      }
+    }
+    .vertical-nav {
+      width: 240px;
+      max-height: $maxHeight;
+      min-height: $mixHeight;
+      overflow-y: auto;
+      .el-submenu__icon-arrow {
+        margin-top: -6px;
+      }
+      .el-menu-item {
+        &.is-active {
+          background: none;
+        }
+        &.hover-active {
+          @include font_color($color: '$2-color-1');
+          @include background_color($color: '$2-color-2');
+          i {
+            @include font_color($color: '$2-color-1');
+          }
+        }
+      }
+
+      &.blue {
+        @include background_color($color: '$2-color-6');
+        .el-menu-item {
+          background-color: transparent;
+          @include font_color($color: '$0-color-1');
+          i {
+            @include font_color($color: '$0-color-1');
+          }
+          &:focus,
+          &:hover,
+          &.hover-active {
+            @include font_color($color: '$1-color-1', $opacity: .65);
+            @include background_color($color: '$0-color-1');
+            i {
+              @include font_color($color: '$1-color-1', $opacity: .65);
+            }
+          }
+          &.is-active {
+            @include font_color($color: '$2-color-1');
+            @include background_color($color: '$0-color-1');
+            i {
+              @include font_color($color: '$2-color-1');
+            }
+          }
+          
+        }
+        
+      }
+    }
+  }
+  &.submenu-level-3 {
+    width: 240px;
+    overflow-y: auto;
+    height: 100%;
+    @include background_color($color: '$0-color-1');
+    .el-menu-item {
+      &.is-active {
+        background: none;
+      }
+    }
+  }
+  &.submenu-level-4 {
+    height: 100%;
+    // width: calc(100vw - 500px);
+    @include background_color($color: '$1-color-8');
+    padding: 16px;
+    box-sizing: border-box;
+    .nav-search {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      .s-input {
+        margin-bottom: 16px;
+      }
+      .search-content {
+        flex: 1;
+        overflow-y: auto;
+        .nav-group {
+          .nav-item {
+            @include font_color($color: '$1-color-1', $opacity: .65);
+            font-size: 14px;
+            line-height: 40px;
+            cursor: pointer;
+            &:hover, &.is-active {
+              @include font_color($color: '$2-color-1');
+            }
+            .menu-icon {
+              &:first-child {
+                margin-right: 5px;
+              }
+            }
+          }
+          > .nav-item {
+            font-size: 16px;
+            border-style: solid;
+            border-width: 0 0 1px;
+            @include border_color($color: '$1-color-7');
+            width: 33.33%;
+          }
+          .nav-group_sub {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 8px;
+            .nav-item {
+              width: 33.333%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.el-tooltip__popper {
+    &[x-placement^=right] {
+      margin-left: 5px;
+    }
+    &.is-light {
+      border: none;
+      @include background_color($color: '$0-color-1');
+      @include font_color($color: '$1-color-1', $opacity: .65);
+      box-shadow: 0px 1px 4px 0px themed($key: '$1-color-6', $opacity: .24);
+    }
+  }
+  .el-menu--popup-right-start {
+    border-radius: 0 4px 4px 0;
+  }
+  .submenu-navpop {
+    .el-menu {
+      border-right: 0;
+    }
+    .el-menu-item {
+      font-size: 16px;
+      @include font_color($color: '$1-color-1', $opacity: .65);
+      i {
+        font-size: 14px;
+        vertical-align: baseline;
+        @include font_color($color: '$1-color-1', $opacity: .65);
+      }
+      &:focus {
+        background: none;
+        @include font_color($color: '$1-color-1', $opacity: .65);
+      }
+      &:hover, &:hover i {
+        @include font_color($color: '$2-color-1');
+        @include background_color($color: '$2-color-2');
+      }
+    }
+    .el-submenu__title {
+      font-size: 16px;
+      @include font_color($color: '$1-color-1', $opacity: .65);
+      i[class^=el-icon] {
+        margin-right: 5px;
+        @include font_color($color: '$1-color-1', $opacity: .65);
+      }
+      &:focus, &:hover, &.active {
+        @include font_color($color: '$1-color-1', $opacity: .65);
+        @include background_color($color: '$0-color-1');
+        // i {
+        //   @include font_color($color: '$2-color-1');
+        // }
+      }
+    }
+  }
+}

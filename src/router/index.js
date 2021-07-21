@@ -2,7 +2,7 @@
  * @Author: PT
  * @Date: 2021-05-28 17:10:52
  * @LastEditors: PT
- * @LastEditTime: 2021-06-23 19:41:32
+ * @LastEditTime: 2021-07-15 16:36:56
  * @Description: file content
  */
 import Vue from 'vue'
@@ -25,9 +25,9 @@ const router = new Router({
     : '/',
   routes: [
     {
-      path: '/test',
-      name: 'Test',
-      component: () => import(/* webpackChunkName: 'Test' */'@/views/test/test'),
+      path: '/user',
+      name: 'User',
+      component: () => import(/* webpackChunkName: 'User' */'@/views/user/user'),
     },
     {
       path: '/login',
@@ -35,9 +35,14 @@ const router = new Router({
       component: () => import(/* webpackChunkName: 'Login' */'@/views/login/login'),
     },
     {
-      path: '/login2',
-      name: 'Login2',
-      component: () => import(/* webpackChunkName: 'Login2' */'@/views/login/login2'),
+      path: '/button',
+      name: 'button',
+      component: () => import(/* webpackChunkName: 'button' */'@/views/components/button'),
+    },
+    {
+      path: '/alert',
+      name: 'alert',
+      component: () => import(/* webpackChunkName: 'alert' */'@/views/components/alert'),
     },
   ]
 })

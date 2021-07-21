@@ -1,0 +1,78 @@
+/*浏览器样式格式化*/
+::-webkit-scrollbar {
+  height: 10px !important;
+  width: 10px !important;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+border-radius: 4px;
+  border-style: dashed;
+  background-color: rgba(157, 165, 183, 0.4);
+  border-color: transparent;
+  border-width: 2px;
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  border-radius: 4px;
+  background: rgba(157, 165, 183, 0.7);
+}
+
+.docs-content h2, .docs-content h3, .docs-content h4, .docs-content h5 {
+  font-weight: 400;
+  color: #1f2f3d;
+}
+.docs-content p {
+  font-size: 14px;
+  color: #5e6d82;
+  line-height: 1.5em;
+}
+table.table-md {
+  width: 100%;
+  background-color: #fff;
+  font-size: 14px;
+  margin-bottom: 45px;
+  line-height: 1.5em;
+  display: table;
+  border: none;
+  td, th {
+    border-width: 0 0 1px 0;
+    border-bottom-style: solid;
+    border-bottom-color: #dcdfe6;
+    padding: 15px;
+    max-width: 250px;
+  }
+  th {
+    text-align: left;
+    white-space: nowrap;
+    color: #909399;
+    font-weight: 400;
+  }
+  td {
+    color: #606266;
+  }
+  td:first-child, th:first-child {
+    padding-left: 10px;
+  }
+}
+
+.header-anchor {
+  float: left;
+  margin-left: -20px;
+  opacity: 0;
+  cursor: pointer;
+  color: #409eff;
+}
+
+h2:hover a.header-anchor, h3:hover a.header-anchor, h4:hover a.header-anchor, h5:hover a.header-anchor {
+  opacity: .4;
+}
+
+@import './button.scss';
+@import './row.scss';
+@import './icon.scss';

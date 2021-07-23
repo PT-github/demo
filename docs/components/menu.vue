@@ -2,7 +2,7 @@
  * @Author: PT
  * @Date: 2021-07-16 16:46:47
  * @LastEditors: PT
- * @LastEditTime: 2021-07-19 15:29:44
+ * @LastEditTime: 2021-07-23 10:13:06
  * @Description: file content
 -->
 <template>
@@ -62,8 +62,56 @@ export default {
             },
             {
               name: 'InputNumber 计数器',
-              path: '/inputnumber'
-            }
+              path: '/input-number'
+            },
+            {
+              name: 'Select 选择器',
+              path: '/select'
+            },
+            {
+              name: 'TreeSelect 选择器',
+              path: '/treeselect'
+            },
+            {
+              name: 'Cascader 级联选择器',
+              path: '/cascader'
+            },
+            {
+              name: 'Switch 开关',
+              path: '/switch'
+            },
+            {
+              name: 'Slider 滑块',
+              path: '/slider'
+            },
+            {
+              name: 'TimePicker 时间选择器',
+              path: '/time-picker'
+            },
+            {
+              name: 'DatePicker 日期选择器',
+              path: '/date-picker'
+            },
+            {
+              name: 'DateTimePicker 日期时间选择器',
+              path: '/datetime-picker'
+            },
+            {
+              name: 'Upload 上传',
+              path: '/upload'
+            },
+            {
+              name: 'Rate 评分',
+              path: '/rate'
+            },
+            {
+              name: 'Transfer 穿梭框',
+              path: '/transfer'
+            },
+            {
+              name: 'Form 表单',
+              path: '/form'
+            },
           ]
         },{
           name: '基础组件',

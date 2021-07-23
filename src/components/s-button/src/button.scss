@@ -9,9 +9,20 @@
     opacity: 1;
   }
 }
-.s-button.el-button {
+.s-button {
   border-radius: 2px;
+  font-size: 16px;
+  padding: 11px 15px;
+  // &:not(), &:not(.el-button--small), &:not(.el-button--mini) {
+  //   padding: 11px 15px;
+  // }
+  &:not(.el-button--text) {
+    @include border_color($color: '$1-color-1', $opacity: .15);
+  }
   &.el-button--default{
+    &.is-dashed {
+      border-style: dashed;
+    }
     @include font_color($color: '$1-color-1', $opacity: .65);
     &:focus,&:hover{
       @include font_color($color: '$2-color-1');
@@ -20,21 +31,16 @@
       @include font_color($color: '$1-color-1', $opacity: .25);
     }
   }
-  &.is-round {
-    border-radius: 20px;
+  &.el-button--medium {
+    padding: 9px 15px;
   }
-  &.is-circle {
-    border-radius: 50%;
+  &.el-button--small {
+    padding: 8px 15px;
+    font-size: 14px;
   }
-  &.el-button--dashed {
-    border-style: dashed;
-    @include font_color($color: '$1-color-1', $opacity: .65);
-    &:focus,&:hover{
-      @include font_color($color: '$2-color-1');
-    }
-    &.is-disabled, &.is-disabled:hover{
-      @include font_color($color: '$1-color-1', $opacity: .25);
-    }
+  &.el-button--mini {
+    padding: 4px 7px;
+    font-size: 14px;
   }
   &.el-button--primary{
     @include font_color($color: '$0-color-1');
@@ -47,6 +53,25 @@
       @include button_property($color1:'$2-color-1', $color2:'$2-color-2', $color3:'$0-color-1', $body-opacity: .4)
     }
   }
+  // &.el-button--dashed {
+  //   border-style: dashed;
+  //   @include font_color($color: '$1-color-1', $opacity: .65);
+  //   &:focus,&:hover{
+  //     @include font_color($color: '$2-color-1');
+  //   }
+  //   &.is-disabled, &.is-disabled:hover{
+  //     @include font_color($color: '$1-color-1', $opacity: .25);
+  //   }
+  // }
+  &.is-round {
+    border-radius: 20px;
+  }
+  &.is-circle {
+    border-radius: 50%;
+    padding: 11px 11px;
+  }
+  
+  
   &.el-button--success{
     @include font_color($color: '$0-color-1');
     @include background_color($color: '$3-color-1');

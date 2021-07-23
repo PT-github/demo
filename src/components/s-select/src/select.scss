@@ -1,4 +1,20 @@
 .s-select {
+  .el-input {
+    font-size: 16px;;
+  }
+  .el-input--medium, .el-input--small {
+    font-size: 14px;
+  }
+  .el-input--mini {
+    font-size: 14px;
+    .el-input__inner {
+      height: 24px;
+      line-height: 24px;
+    }
+    .el-input__icon {
+      line-height: 24px;
+    }
+  }
   .el-input__inner{
     @include border_color($color: '$1-color-1', $opacity:.15);
     @include font_color($color: '$1-color-1', $opacity:.65);
@@ -6,7 +22,7 @@
     border-radius: 2px;
   }
   .el-input.is-focus .el-input__inner{
-    @include border_color($color: '$2-color-1');
+    @include border_color($color: '$2-color-4');
   }
   .el-tag {
     @include background_color($color: '$1-color-1', $opacity: .04);
@@ -17,5 +33,74 @@
   .el-tag__close.el-icon-close {
     background-color: transparent;
     @include font_color($color: '$1-color-1', $opacity:.65);
+  }
+
+  .el-input.is-disabled .el-input__inner {
+    @include background_color($color: '$1-color-1', $opacity: .04);
+    @include border_color($color: '$1-color-1', $opacity:.15);
+    @include font_color($color: '$1-color-1', $opacity:.25);
+  }
+}
+.s-select-dropdown {
+  @include border_color($color: '$1-color-1', $opacity:.15);
+  border-radius: 2px;
+
+  .popper__arrow {
+    display: none;
+  }
+
+  .el-select-dropdown__list {
+    padding: 0;
+  }
+
+  .s-option.el-select-dropdown__item.selected, &.is-multiple .s-option.el-select-dropdown__item.selected {
+    @include background_color($color: "$2-color-2");
+    @include font_color($color: '$1-color-1', $opacity:.65);
+    font-weight: 400;
+    &:after {
+      @include font_color($color: '$2-color-4');
+    }
+  }
+
+  .el-select-dropdown__item {
+    height: 32px;
+    line-height: 32px;
+    @include font_color($color: '$1-color-1', $opacity:.65);
+    &:hover, &.hover {
+      @include background_color($color: "$2-color-2");
+    }
+    &.is-disabled {
+      @include font_color($color: '$1-color-1', $opacity:.25);
+    }
+  }
+
+  .el-select-group__title {
+    @include font_color($color: '$1-color-1', $opacity:.65);
+    font-size: 14px;
+    padding-left: 15px;
+    line-height: 34px;
+    position: relative;
+    &:after {
+      content: '';
+      position: absolute;
+      border-style: solid;
+      border-width: 0 0 1px;
+      left: 15px;
+      right: 0;
+      bottom: 0;
+      @include border_color($color: '$1-color-1', $opacity:.06);
+    }
+    
+  }
+  .el-select-group .el-select-dropdown__item {
+    padding-left: 30px;
+  }
+  .el-select-group__wrap {
+    &:not(:last-of-type) {
+      padding-bottom: 10px;
+    }
+    &:after {
+      display: none;
+    }
   }
 }

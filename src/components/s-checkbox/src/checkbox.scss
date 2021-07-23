@@ -1,7 +1,15 @@
 .s-checkbox {
   @include font_color($color: '$1-color-1', $opacity:.65);
+  .el-checkbox__label {
+    vertical-align: middle;
+  }
   &.is-bordered.is-checked{
     @include border_color($color: '$2-color-1');
+  }
+  .el-checkbox__input.is-disabled .el-checkbox__inner {
+    @include background_color($color: '$1-color-1', $opacity:.04);
+    @include border_color($color: '$1-color-1', $opacity: .15);
+
   }
   .el-checkbox__input.is-disabled + span.el-checkbox__label{
     @include font_color($color: '$1-color-1', $opacity:.25);
@@ -14,7 +22,18 @@
     @include background_color($color: '$2-color-1');
   }
   .el-checkbox__input.is-disabled.is-checked .el-checkbox__inner{
-    background-color: #f2f6fc;
-    border-color: #dcdfe6;
+    @include background_color($color: '$1-color-1', $opacity:.25);
+    @include border_color($color: '$1-color-1', $opacity: .25);
+    &:after {
+      @include border_color($color: '$0-color-1');
+    }
+  }
+  .el-checkbox__inner::after {
+    top: 2px;
+    left: 5px;
+  }
+  .el-checkbox__inner {
+    width: 16px;
+    height: 16px;
   }
 }

@@ -2,7 +2,7 @@
  * @Author: PT
  * @Date: 2021-07-16 10:36:16
  * @LastEditors: PT
- * @LastEditTime: 2021-07-19 11:30:50
+ * @LastEditTime: 2021-07-21 10:37:57
  * @Description: file content
 -->
 <template>
@@ -141,11 +141,11 @@ export default {
   font-size: 12px;
 }
 .demo-block .demo-block-code {
-  background-color: #f7f7f7;
+  background-color: #fafafa;
   font-size: 0;
 }
 .demo-block .demo-block-code code {
-  background-color: #f7f7f7;
+  background-color: #fafafa;
   font-family: Menlo, Monaco, Consolas, Courier, monospace;
   border: none;
   display: block;

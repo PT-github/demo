@@ -72,7 +72,37 @@ table.table-md {
 h2:hover a.header-anchor, h3:hover a.header-anchor, h4:hover a.header-anchor, h5:hover a.header-anchor {
   opacity: .4;
 }
+a {
+  color: #409eff;
+  text-decoration: none;
+}
+blockquote {
+  font-size: 16px;
+  color: #999;
+  border-left: 3px solid #dfe2e5;
+  margin: 16px 0;
+  padding: 4px 0 4px 16px;
+  > p {
+    margin: 0;
+  }
+}
+// div[class*="language-"] {
+//   position: relative;
+//   background-color: #282c34;
+//   border-radius: 6px;
+// }
+  pre {
+    position: relative;
+    background-color: #282c34;
+    border-radius: 6px;
+    padding: 20px 24px;
+    code.language-js {
+      font-size: 14px;
+      color: #FFFFFF;
+    }
+  }
 
 @import './button.scss';
 @import './row.scss';
 @import './icon.scss';
+@import './input.scss';

@@ -5,13 +5,13 @@
 
 基础的按钮用法。
 
-:::demo 使用`type`、`plain`、`round`和`circle`属性来定义 Button 的样式。
+:::demo 使用`type`、`plain`、`round`、`circle`和`dashed`属性来定义 Button 的样式。
 
 ```html
 <template>
   <s-row>
-    <s-button>默认按钮</s-button>
-    <s-button type="primary">主要按钮</s-button>
+    <s-button>主按钮</s-button>
+    <s-button type="primary">主按钮</s-button>
     <s-button type="success">成功按钮</s-button>
     <s-button type="info">信息按钮</s-button>
     <s-button type="warning">警告按钮</s-button>
@@ -19,8 +19,8 @@
   </s-row>
 
   <s-row>
-    <s-button plain>朴素按钮</s-button>
-    <s-button type="primary" plain>主要按钮</s-button>
+    <s-button plain>主按钮</s-button>
+    <s-button type="primary" plain>主按钮</s-button>
     <s-button type="success" plain>成功按钮</s-button>
     <s-button type="info" plain>信息按钮</s-button>
     <s-button type="warning" plain>警告按钮</s-button>
@@ -28,8 +28,8 @@
   </s-row>
 
   <s-row>
-    <s-button round>圆角按钮</s-button>
-    <s-button type="primary" round>主要按钮</s-button>
+    <s-button round>主按钮</s-button>
+    <s-button type="primary" round>主按钮</s-button>
     <s-button type="success" round>成功按钮</s-button>
     <s-button type="info" round>信息按钮</s-button>
     <s-button type="warning" round>警告按钮</s-button>
@@ -43,6 +43,10 @@
     <s-button type="info" icon="el-icon-message" circle></s-button>
     <s-button type="warning" icon="el-icon-star-off" circle></s-button>
     <s-button type="danger" icon="el-icon-delete" circle></s-button>
+  </s-row>
+
+  <s-row>
+    <s-button dashed>主按钮</s-button>
   </s-row>
 </template>
 ```
@@ -173,6 +177,7 @@ Button 组件提供除了默认值以外的三种尺寸，可以在不同场景�
 | plain     | 是否朴素按钮   | boolean    | — | false   |
 | round     | 是否圆角按钮   | boolean    | — | false   |
 | circle     | 是否圆形按钮   | boolean    | — | false   |
+| dashed     | 是否虚线按钮   | boolean    | — | false   |
 | loading     | 是否加载中状态   | boolean    | — | false   |
 | disabled  | 是否禁用状态    | boolean   | —   | false   |
 | icon  | 图标类名 | string   |  —  |  —  |

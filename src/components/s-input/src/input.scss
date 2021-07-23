@@ -1,23 +1,40 @@
 .s-input {
+  &.el-input {
+    font-size: 16px;
+  }
   .el-input__inner, .el-textarea__inner {
     border-radius: 2px;
-    @include background_color($color: "$0-color-1");
+    // @include background_color($color: "$0-color-1");
     @include font_color($color: "$1-color-1", $opacity: .65);
     @include border_color($color: "$1-color-1", $opacity: .15);
     @include placeholder_color($color: "$1-color-1", $opacity: .25);
   }
   .el-input-group__append, .el-input-group__prepend {
-    border-radius: 2px;
-    padding: 0 13px;
+    @include background_color($color: "$1-color-1", $opacity: .04); // rgba(0,0,0,0.04);
     @include border_color($color: "$1-color-1", $opacity: .15);
+    @include font_color($color: "$1-color-1", $opacity: .65);
+    padding: 0 13px;
   }
-  &.is-disabled {
-    .el-input-group__append, .el-input-group__prepend {
-      background-color: #f5f7fa;
-      border-color: #e4e7ed;
-      color: #c0c4cc;
+  &.el-input--small {
+    font-size: 14px;
+  }
+  &.el-input--mini {
+    font-size: 14px;
+    .el-input__inner {
+      height: 24px;
+      line-height: 24px;
+    }
+    .el-input__icon {
+      line-height: 24px;
     }
   }
+  &.el-input.is-disabled .el-input__inner {
+    @include background_color($color: "$1-color-1", $opacity: .04);
+    @include border_color($color: "$1-color-1", $opacity: .15);
+    @include font_color($color: "$1-color-1", $opacity: .25);
+    @include placeholder_color($color: "$1-color-1", $opacity: .25);
+  }
+
   &.is-active .el-input__inner, .el-input__inner:focus{
     @include border_color($color: "$2-color-1");
   }

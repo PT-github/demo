@@ -2,7 +2,7 @@
  * @Author: PT
  * @Date: 2021-07-15 18:23:26
  * @LastEditors: PT
- * @LastEditTime: 2021-07-21 10:25:16
+ * @LastEditTime: 2021-07-23 10:18:17
  * @Description: file content
  */
 import Vue from 'vue'
@@ -14,13 +14,14 @@ const ROUTER_VIEWS = []
 VIEW_FILES.keys().forEach(filePath => {
 
   let name = filePath.split('/').pop().split('.')[0]
+  console.log(filePath, '000')
   ROUTER_VIEWS.push({
     path: `/${name}`,
     name: name,
     component: () => import(`../views/${name}.md`),
   })
 })
-
+console.log(ROUTER_VIEWS)
 const router = new Router({
   mode: 'history',
   routes: [

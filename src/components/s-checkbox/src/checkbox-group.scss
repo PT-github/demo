@@ -9,4 +9,7 @@
     @include border_color($color: '$2-color-1');
     @include background_color($color: '$2-color-1');
   }
+  .el-checkbox__input {
+    vertical-align: bottom;
+  }
 }

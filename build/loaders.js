@@ -42,10 +42,11 @@ let urlLoader = [
 let styleLoaders = utils.styleLoaders()
 
 let babelLoader = {
-  test: /\.js/,
+  test: /\.js$/,
   exclude: /node_modules/,
   include: [
-    path.resolve(config.projectRoot, 'src')
+    path.resolve(config.projectRoot, 'src'),
+    path.resolve(config.projectRoot, 'docs'),
   ],
   use: {
     loader: 'babel-loader'

@@ -1,6 +1,3 @@
----
-pageClass: custom-switch
----
 ## Switch 开关
 
 表示两种相互对立的状态间的切换，多用于触发「开/关」。
@@ -39,7 +36,6 @@ pageClass: custom-switch
   inactive-text="按年付费">
 </s-switch>
 <s-switch
-  style="display: block"
   v-model="value2"
   active-color="#13ce66"
   inactive-color="#ff4949"
@@ -102,6 +98,30 @@ pageClass: custom-switch
   v-model="value2"
   disabled>
 </s-switch>
+<script>
+  export default {
+    data() {
+      return {
+        value1: true,
+        value2: false
+      }
+    }
+  };
+</script>
+```
+:::
+
+### 两种尺寸
+
+Switch 组件提供两种尺寸，可以在不同场景下选择合适的按钮尺寸。
+
+:::demo 额外的尺寸：`small`，通过设置`size`属性来配置它们。
+
+```html
+<template>
+  <s-switch v-model="value1"></s-switch>
+  <s-switch v-model="value2" size="small"></s-switch>
+</template>
 <script>
   export default {
     data() {

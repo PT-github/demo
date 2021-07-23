@@ -9,3 +9,28 @@
     @include border_color($color: '$2-color-1');
   }
 }
+.s-cascader-dropdown, .s-cascader-panel {
+  .el-cascader-menu {
+    @include font_color($color: '$1-color-1', $opacity:.65);
+  }
+  .el-cascader-node.in-active-path, .el-cascader-node.is-active, .el-cascader-node.is-selectable.in-checked-path {
+    @include font_color($color: '$1-color-1', $opacity:.65);
+    @include background_color($color: '$2-color-2');
+    font-weight: 400;
+  }
+  .popper__arrow {
+    display: none;
+  }
+  .el-cascader-menu__list {
+    padding: 0;
+  }
+
+  .el-cascader-node {
+    padding-left: 5px;
+    height: 32px;
+    line-height: 32px;
+  }
+  .el-cascader-node__prefix {
+    display: none;
+  }
+}

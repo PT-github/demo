@@ -2,7 +2,7 @@
  * @Author: PT
  * @Date: 2020-10-09 09:45:10
  * @LastEditors: PT
- * @LastEditTime: 2020-10-09 15:02:07
+ * @LastEditTime: 2021-07-23 11:11:53
  * @Description: SCascader组件
  */
 
@@ -11,7 +11,7 @@ export default {
   name: 'SCascader',
   render () {
     return (
-      <el-cascader ref="cascader" class="s-cascader" {
+      <el-cascader ref="cascader" popperClass="s-cascader-dropdown" class="s-cascader" {
         ...{
           attrs: {
             ...this.$attrs

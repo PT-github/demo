@@ -1,6 +1,3 @@
----
-pageClass: custom-tag
----
 ## Tag 标签
 
 用于标记和选择。
@@ -81,8 +78,6 @@ pageClass: custom-tag
   }
   .button-new-tag {
     margin-left: 10px;
-    height: 32px;
-    line-height: 30px;
     padding-top: 0;
     padding-bottom: 0;
   }
@@ -184,6 +179,16 @@ Tag 组件提供了三个不同的主题：`dark`、`light` 和 `plain`
     }
   }
 </script>
+<style>
+  .tag-group__title {
+    width: 45px;
+    font-size: 14px;
+    color: #606266;
+  }
+  .tag-group + .tag-group {
+    margin-top: 10px;
+  }
+</style>
 ```
 :::
 

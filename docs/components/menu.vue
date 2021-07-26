@@ -2,7 +2,7 @@
  * @Author: PT
  * @Date: 2021-07-16 16:46:47
  * @LastEditors: PT
- * @LastEditTime: 2021-07-23 10:13:06
+ * @LastEditTime: 2021-07-26 17:12:25
  * @Description: file content
 -->
 <template>
@@ -114,23 +114,35 @@ export default {
             },
           ]
         },{
-          name: '基础组件',
+          name: 'Data 组件',
           children: [
             {
-              name: '栅格布局',
-              path: '/row'
+              name: 'Table 表格',
+              path: '/table'
             },
             {
-              name: 'Layout布局',
-              path: '/layout'
+              name: 'Tag 标签',
+              path: '/tag'
             },
             {
-              name: 'Icon图标',
-              path: '/icon'
+              name: 'Progress 进度条',
+              path: '/progress'
             },
             {
-              name: 'Button按钮',
-              path: '/button'
+              name: 'Tree 树形控件',
+              path: '/tree'
+            },
+            {
+              name: 'Pagination 分页',
+              path: '/pagination'
+            },
+            {
+              name: 'Badge 标记',
+              path: '/badge'
+            },
+            {
+              name: 'Avatar 头像',
+              path: '/avatar'
             }
           ]
         },

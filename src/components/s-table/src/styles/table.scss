@@ -11,4 +11,16 @@
       @include background_color($color: '$1-color-1', $opacity: .02);
     }
   }
+  &.el-table--mini, &.el-table--small, .el-table__expand-icon {
+    font-size: 14px;
+  }
+  &.el-table--striped .el-table__body tr.el-table__row--striped td, &.el-table--enable-row-hover .el-table__body tr:hover>td {
+    @include background_color('$2-color-2')
+  }
+  .el-table__body tr.current-row>td {
+    @include background_color('$2-color-2')
+  }
+  td, th.is-leaf {
+    @include border_color('$1-color-1', .06)
+  }
 }

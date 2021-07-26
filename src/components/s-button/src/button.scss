@@ -39,6 +39,10 @@
     padding: 4px 7px;
     font-size: 14px;
   }
+  &.el-button--text {
+    padding-left: 0;
+    padding-right: 0;
+  }
   &.el-button--primary{
     @include font_color($color: '$0-color-1');
     @include background_color($color: '$2-color-1');

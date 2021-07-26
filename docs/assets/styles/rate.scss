@@ -1,0 +1,13 @@
+.docs-rate {
+  .demo-block-source > div {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .block {
+    padding: 30px 0;
+    text-align: center;
+    border-right: 1px solid #eff2f6;
+    flex: 1;
+  }
+}

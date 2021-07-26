@@ -1,8 +1,5 @@
-.el-rate{
-  .el-icon-star-off{
-    &::before{
-      // content: "\e797";
-      @include font_color("$1-color-1",.25)
-    }
-  }
-}
+// .s-rate{
+//   .el-rate__icon{
+//     @include font_color("$1-color-1",.04)
+//   }
+// }

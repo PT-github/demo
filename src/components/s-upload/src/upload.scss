@@ -1,4 +1,14 @@
 .s-upload {
+  .el-upload__tip {
+    @include font_color('$1-color-1', .65);
+    font-size: 14px;
+  }
+  .el-upload-list__item-name {
+    @include font_color('$1-color-1', .65);
+    [class^=el-icon] {
+      @include font_color('$1-color-1', .45);
+    }
+  }
   .el-upload-list__item.is-success .el-upload-list__item-name:focus, .el-upload-list__item.is-success .el-upload-list__item-name:hover{
     @include font_color($color: '$2-color-1');
   }
@@ -8,5 +18,8 @@
   .el-upload--picture-card:hover, .el-upload:focus{
     @include border_color($color: '$2-color-1');
     @include font_color($color: '$2-color-1');
+  }
+  .el-icon-document:before {
+    content: '\e77d';
   }
 }

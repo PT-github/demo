@@ -1,0 +1,37 @@
+{
+  "id": "2118325",
+  "name": "组件docs",
+  "font_family": "icomoon",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "17565010",
+      "name": "smiley3",
+      "font_class": "rate-face-3",
+      "unicode": "e846",
+      "unicode_decimal": 59462
+    },
+    {
+      "icon_id": "1393643",
+      "name": "emoji",
+      "font_class": "rate-face-2",
+      "unicode": "e6eb",
+      "unicode_decimal": 59115
+    },
+    {
+      "icon_id": "15188329",
+      "name": "emoji-speechless",
+      "font_class": "rate-face-off",
+      "unicode": "e6e2",
+      "unicode_decimal": 59106
+    },
+    {
+      "icon_id": "17412221",
+      "name": "Emoji Sad-1",
+      "font_class": "rate-face-1",
+      "unicode": "e671",
+      "unicode_decimal": 58993
+    }
+  ]
+}

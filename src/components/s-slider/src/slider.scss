@@ -1,6 +1,46 @@
-.el-slider__bar{
-  @include background_color("$2-color-1");
-}
-.el-slider__button{
-  @include border_color("$2-color-1");
+// .el-slider__bar{
+//   @include background_color("$2-color-1");
+// }
+// .el-slider__button{
+//   @include border_color("$2-color-1");
+// }
+.s-slider {
+  .el-slider__bar {
+    height: 4px;
+    @include background_color("$2-color-3");
+  }
+  .el-slider__button {
+    @include border_color("$2-color-3");
+    width: 14px;
+    height: 14px;
+    &.hover, &:hover {
+      @include border_color("$2-color-1");
+    }
+  }
+  .el-slider__runway {
+    @include background_color("$1-color-1", .04);
+    height: 4px;
+  }
+  .el-slider__stop {
+    height: 8px;
+    width: 8px;
+    top: -2px;
+    &:after {
+      content: '';
+      width: 8px;
+      height: 8px;
+      border-width: 2px;
+      border-style: solid;
+      @include border_color("$1-color-1", .09);
+      display: inline-block;
+      border-radius: 100%;
+      box-sizing: border-box;
+      position: absolute;
+      top: 0;
+      left: 0px;
+    }
+  }
+  .el-slider__marks-text {
+    @include font_color("$1-color-1", .65);
+  }
 }

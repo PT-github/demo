@@ -1,6 +1,3 @@
----
-pageClass: custom-form
----
 ## Form 表单
 
 由输入框、选择器、单选框、多选框等控件组成，用以收集、校验、提交数据
@@ -519,7 +516,7 @@ W3C 标准中有如下[规定](https://www.w3.org/MarkUp/html-spec/html-spec_8.h
 
 :::demo 如果希望某个表单项或某个表单组件的尺寸不同于 Form 上的`size`属性，直接为这个表单项或表单组件设置自己的`size`即可。
 ```html
-<s-form ref="form" :model="sizeForm" label-width="80px" size="mini">
+<s-form ref="form" :model="sizeForm" label-width="80px" size="small">
   <s-form-item label="活动名称">
     <s-input v-model="sizeForm.name"></s-input>
   </s-form-item>

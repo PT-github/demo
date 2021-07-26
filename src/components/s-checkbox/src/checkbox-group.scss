@@ -1,15 +1,28 @@
 .s-checkbox-group {
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: top;
   .el-checkbox-button__inner{
     @include font_color($color: '$1-color-1', $opacity:.65);
+    font-size: 16px;
   }
   .el-checkbox-button.is-checked .el-checkbox-button__inner{
     @include font_color($color: '$0-color-1');
     @include border_color($color: '$2-color-1');
     @include background_color($color: '$2-color-1');
   }
-  .el-checkbox__input {
-    vertical-align: bottom;
+  // .el-checkbox__input {
+  //   vertical-align: middle;
+  // }
+  .el-checkbox-button--medium .el-checkbox-button__inner{
+    font-size: 14px;
+    // padding: 8px 16px;
+  }
+  .el-checkbox-button--small .el-checkbox-button__inner{
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+  .el-checkbox-button--mini .el-checkbox-button__inner{
+    font-size: 14px;
+    padding: 4px 7px;
   }
 }

@@ -9,4 +9,12 @@
     @include border_color($color: '$2-color-1');
     @include background_color($color: '$2-color-1');
   }
+  .el-radio-button--small .el-radio-button__inner {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+  .el-radio-button--mini .el-radio-button__inner {
+    padding: 4px 7px;
+    font-size: 14px;
+  }
 }

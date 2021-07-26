@@ -1,6 +1,10 @@
 .s-radio {
   @include font_color($color: '$1-color-1', $opacity:.65);
-  &.is-bordered.is-checked{
+  font-size: 16px;
+  .el-radio__label {
+    font-size: 16px;
+  }
+  &.is-bordered.is-checked:not(.is-disabled) {
     @include border_color($color: '$2-color-1');
   }
   .el-radio__input.is-checked + .el-radio__label,.el-radio__input.is-checked .el-radio__inner{
@@ -23,5 +27,14 @@
   .el-radio__inner {
     width: 16px;
     height: 16px;
+  }
+  &.el-radio--medium.is-bordered {
+    padding: 8px 20px 0 10px;
+  }
+  &.el-radio--small.is-bordered {
+    padding: 6px 15px 0 10px;
+  }
+  &.el-radio--mini.is-bordered {
+    padding: 4px 15px 0 10px;
   }
 }

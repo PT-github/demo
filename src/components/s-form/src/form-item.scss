@@ -1,0 +1,8 @@
+.s-form-item {
+  &.el-form-item--mini {
+    line-height: 24px;
+  }
+  &.el-form-item--mini .el-form-item__content, &.el-form-item--mini .el-form-item__label {
+    line-height: 24px;
+  }
+}

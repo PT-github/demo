@@ -137,6 +137,48 @@
 :::
 
 
+### 带有边框
+
+:::demo 设置`border`属性可以渲染为带有边框的单选框。
+```html
+<template>
+  <div>
+    <s-radio v-model="radio1" label="1" border>备选项1</s-radio>
+    <s-radio v-model="radio1" label="2" border>备选项2</s-radio>
+  </div>
+  <div style="margin-top: 20px">
+    <s-radio v-model="radio2" label="1" border size="medium">备选项1</s-radio>
+    <s-radio v-model="radio2" label="2" border size="medium">备选项2</s-radio>
+  </div>
+  <div style="margin-top: 20px">
+    <s-radio-group v-model="radio3" size="small">
+      <s-radio label="1" border>备选项1</s-radio>
+      <s-radio label="2" border disabled>备选项2</s-radio>
+    </s-radio-group>
+  </div>
+  <div style="margin-top: 20px">
+    <s-radio-group v-model="radio4" size="mini" disabled>
+      <s-radio label="1" border>备选项1</s-radio>
+      <s-radio label="2" border>备选项2</s-radio>
+    </s-radio-group>
+  </div>
+</template>
+
+<script>
+  export default {
+    data () {
+      return {
+        radio1: '1',
+        radio2: '1',
+        radio3: '1',
+        radio4: '1'
+      };
+    }
+  }
+</script>
+```
+:::
+
 ### Radio Attributes
 | 参数      | 说明    | 类型      | 可选值       | 默认值   |
 |---------- |-------- |---------- |-------------  |-------- |

@@ -2,7 +2,7 @@
  * @Author: PT
  * @Date: 2020-10-09 11:02:46
  * @LastEditors: PT
- * @LastEditTime: 2020-10-10 11:33:41
+ * @LastEditTime: 2021-07-23 17:52:00
  * @Description: STimeSelect
  */
 import './time-select.scss'
@@ -14,6 +14,7 @@ export default {
         ref="time-select"
         class="s-time-select"
         popper-class="s-time-select-popper"
+        visible-arrow={false}
         {
           ...{
             attrs: {

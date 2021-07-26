@@ -2,6 +2,7 @@
   @include font_color($color: '$1-color-1', $opacity:.65);
   .el-checkbox__label {
     vertical-align: middle;
+    font-size: 16px;
   }
   &.is-bordered.is-checked{
     @include border_color($color: '$2-color-1');
@@ -28,12 +29,45 @@
       @include border_color($color: '$0-color-1');
     }
   }
-  .el-checkbox__inner::after {
-    top: 2px;
-    left: 5px;
-  }
   .el-checkbox__inner {
     width: 16px;
     height: 16px;
   }
+  .el-checkbox__inner::after {
+    top: 2px;
+    left: 5px;
+  }
+  &.el-checkbox--medium.is-bordered {
+    .el-checkbox__inner {
+      width: 16px;
+      height: 16px;
+      &:after {
+        top: 2px;
+        left: 5px;
+      }
+    }
+  }
+  &.el-checkbox--small.is-bordered {
+    .el-checkbox__inner {
+      width: 14px;
+      height: 14px;
+      &:after {
+        top: 2px;
+        left: 5px;
+      }
+    }
+  }
+  &.el-checkbox--mini.is-bordered {
+    height: 24px;
+    padding: 0 7px;
+    .el-checkbox__inner {
+      width: 14px;
+      height: 14px;
+      &:after {
+        top: 2px;
+        left: 5px;
+      }
+    }
+  }
+  
 }

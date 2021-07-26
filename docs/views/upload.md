@@ -16,7 +16,7 @@
   :limit="3"
   :on-exceed="handleExceed"
   :file-list="fileList">
-  <s-button size="small" type="primary">点击上传</s-button>
+  <s-button size="small" icon="el-icon-ali-upload">点击上传</s-button>
   <div slot="tip" class="el-upload__tip">只能上传jpg/png文件，且不超过500kb</div>
 </s-upload>
 <script>

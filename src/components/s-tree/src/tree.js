@@ -2,7 +2,7 @@
  * @Author: PT
  * @Date: 2020-10-10 11:04:29
  * @LastEditors: PT
- * @LastEditTime: 2020-10-10 11:15:24
+ * @LastEditTime: 2021-07-27 11:01:43
  * @Description: STree
  */
 
@@ -31,17 +31,23 @@ export default {
     filter (...args) {
       this.$refs.tree.filter(...args)
     },
+    getNodeKey (...args) {
+      return this.$refs.tree.getNodeKey(...args)
+    },
+    getNodePath (...args) {
+      return this.$refs.tree.getNodePath(...args)
+    },
     updateKeyChildren (...args) {
       this.$refs.tree.updateKeyChildren(...args)
     },
     getCheckedNodes (...args) {
-      this.$refs.tree.getCheckedNodes(...args)
+      return this.$refs.tree.getCheckedNodes(...args)
     },
     setCheckedNodes (...args) {
       this.$refs.tree.setCheckedNodes(...args)
     },
     getCheckedKeys (...args) {
-      this.$refs.tree.getCheckedKeys(...args)
+      return this.$refs.tree.getCheckedKeys(...args)
     },
     setCheckedKeys (...args) {
       this.$refs.tree.setCheckedKeys(...args)
@@ -50,16 +56,16 @@ export default {
       this.$refs.tree.setChecked(...args)
     },
     getHalfCheckedNodes (...args) {
-      this.$refs.tree.getHalfCheckedNodes(...args)
+      return this.$refs.tree.getHalfCheckedNodes(...args)
     },
     getHalfCheckedKeys (...args) {
-      this.$refs.tree.getHalfCheckedKeys(...args)
+      return this.$refs.tree.getHalfCheckedKeys(...args)
     },
     getCurrentKey (...args) {
-      this.$refs.tree.getCurrentKey(...args)
+      return this.$refs.tree.getCurrentKey(...args)
     },
     getCurrentNode (...args) {
-      this.$refs.tree.getCurrentNode(...args)
+      return this.$refs.tree.getCurrentNode(...args)
     },
     setCurrentKey (...args) {
       this.$refs.tree.setCurrentKey(...args)
@@ -68,7 +74,7 @@ export default {
       this.$refs.tree.setCurrentNode(...args)
     },
     getNode (...args) {
-      this.$refs.tree.getNode(...args)
+      return this.$refs.tree.getNode(...args)
     },
     remove (...args) {
       this.$refs.tree.remove(...args)

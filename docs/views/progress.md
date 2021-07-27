@@ -1,6 +1,3 @@
----
-pageClass: custom-progress
----
 ## Progress 进度条
 
 用于展示操作进度，告知用户当前状态和预期。
@@ -56,8 +53,8 @@ pageClass: custom-progress
 <s-progress :percentage="percentage" :color="customColors"></s-progress>
 <div>
   <s-button-group>
-    <s-button icon="s-icon-minus" @click="decrease"></s-button>
-    <s-button icon="s-icon-plus" @click="increase"></s-button>
+    <s-button icon="el-icon-minus" @click="decrease"></s-button>
+    <s-button icon="el-icon-plus" @click="increase"></s-button>
   </s-button-group>
 </div>
 
@@ -111,11 +108,11 @@ Progress 组件可通过 `type` 属性来指定使用环形进度条，在环形
 :::demo
 
 ```html
-<s-progress type="circle" :percentage="0"></s-progress>
-<s-progress type="circle" :percentage="25"></s-progress>
-<s-progress type="circle" :percentage="100" status="success"></s-progress>
-<s-progress type="circle" :percentage="70" status="warning"></s-progress>
-<s-progress type="circle" :percentage="50" status="exception"></s-progress>
+<s-progress type="circle" :percentage="0" :width="80"></s-progress>
+<s-progress type="circle" :percentage="25" :width="80"></s-progress>
+<s-progress type="circle" :percentage="100" :width="80" status="success"></s-progress>
+<s-progress type="circle" :percentage="70" :width="80" status="warning"></s-progress>
+<s-progress type="circle" :percentage="50" :width="80" status="exception"></s-progress>
 ```
 :::
 

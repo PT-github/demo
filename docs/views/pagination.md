@@ -42,7 +42,9 @@
 ```html
 <s-pagination
   background
-  layout="prev, pager, next"
+  layout="total, sizes, prev, pager, next, jumper"
+  :page-sizes="[100, 200, 300, 400]"
+  :page-size="100"
   :total="1000">
 </s-pagination>
 ```

@@ -1,1 +1,57 @@
-.s-pagination {}
+.s-pagination {
+  font-weight: 400;
+  &.is-background {
+    .btn-next, .btn-prev, .el-pager li {
+      @include background_color('$0-color-1');
+      @include font_color('$1-color-1', .65);
+      font-size: 14px;
+      min-width: 32px;
+      height: 32px;
+      line-height: 30px;
+      border-style: solid;
+      border-width: 1px;
+      @include border_color('$1-color-1', .15);
+      margin: 0 4px;
+    }
+    .el-pager li:not(.disabled).active {
+      @include background_color('$2-color-1');
+      @include border_color('$2-color-1');
+    }
+    // .el-pagination__total {
+    //   height: 32px;
+    //   line-height: 32px;
+    //   font-size: 14px;
+    //   @include font_color('$1-color-1', .65);
+    // }
+    // .el-pagination__sizes {
+    //   @include font_color('$1-color-1', .65);
+    //   height: 32px;
+    //   line-height: 32px;
+    // }
+    .el-input--mini .el-input__inner {
+      height: 32px;
+      line-height: 32px;
+      border-radius: 2px;
+      font-size: 14px;
+      @include font_color('$1-color-1', .65);
+      @include placeholder_color('$1-color-1', .65);
+    }
+    .el-pagination__editor {
+      height: 32px;
+      line-height: 32px;
+      &.el-input .el-input__inner {
+        height: 32px;
+        border-radius: 2px;
+        font-size: 14px;
+        @include font_color('$1-color-1', .65);
+        @include placeholder_color('$1-color-1', .65);
+      }
+    }
+    button, span:not([class*=suffix]) {
+      height: 32px;
+      line-height: 32px;
+      font-size: 14px;
+      @include font_color('$1-color-1', .65);
+    }
+  }
+}

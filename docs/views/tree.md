@@ -1,6 +1,3 @@
----
-pageClass: custom-tree
----
 ## Tree 树形控件
 
 用清晰的层级结构展示信息，可展开或折叠。
@@ -11,7 +8,7 @@ pageClass: custom-tree
 
 :::demo
 ```html
-<s-tree :data="data" :props="defaultProps" @node-click="handleNodeClick"></s-tree>
+<s-tree :data="data" :highlight-current="true" :props="defaultProps" @node-click="handleNodeClick"></s-tree>
 
 <script>
   export default {

@@ -1,2 +1,66 @@
 .s-tree {
+  .el-tree-node__content {
+    height: 38px;
+    &:hover {
+      @include background_color('$0-color-1');
+      .el-tree-node__label {
+        @include background_color('$2-color-2');
+        @include font_color('$2-color-1');
+      }
+    }
+  }
+  .el-tree-node__expand-icon {
+    @include font_color('$1-color-1', .65);
+  }
+  .el-tree-node__label {
+    @include font_color('$1-color-1', .65);
+    padding: 5px;
+  }
+  .el-tree-node:focus>.el-tree-node__content {
+    @include background_color('$0-color-1');
+  }
+  &.el-tree--highlight-current .el-tree-node.is-current>.el-tree-node__content {
+    @include background_color('$0-color-1');
+    .el-tree-node__label {
+      @include background_color('$2-color-2');
+      @include font_color('$2-color-1');
+    }
+  }
+  .el-checkbox {
+    // @include font_color('$2-color-1');
+    font-size: 16px;
+  }
+  .el-checkbox__inner {
+    width: 16px;
+    height: 16px;
+    @include border_color('$1-color-1', .15);
+    &:after {
+      top: 2px;
+      left: 5px;
+    }
+  }
+  .el-checkbox__input.is-checked .el-checkbox__inner,
+  .el-checkbox__input.is-indeterminate .el-checkbox__inner {
+    @include background_color('$2-color-4');
+    @include border_color('$2-color-4');
+  }
+  .el-checkbox__input.is-focus {
+    @include border_color('$2-color-4');
+  }
+  .el-checkbox__input.is-disabled {
+    .el-checkbox__inner {
+      @include background_color('$1-color-1', .04);
+      @include border_color('$1-color-1', .15);
+    }
+    &.is-checked {
+      .el-checkbox__inner {
+        @include background_color('$1-color-1', .25);
+        border-color: transparent;
+        &:after {
+          @include font_color('$0-color-1');
+          @include border_color('$0-color-1');
+        }
+      }
+    }
+  }
 }

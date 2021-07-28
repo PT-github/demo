@@ -42,6 +42,12 @@
   &.el-button--text {
     padding-left: 0;
     padding-right: 0;
+    &:not(.is-disabled) {
+      @include font_color('$2-color-1');
+    }
+    &.is-disabled, &.is-disabled:focus, &.is-disabled:hover {
+      @include font_color($color: '$1-color-1', $opacity: .25);
+    }
   }
   &.el-button--primary{
     @include font_color($color: '$0-color-1');

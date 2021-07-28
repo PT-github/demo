@@ -1,1 +1,90 @@
-.s-alert {}
+.s-alert {
+  padding: 9px 16px;
+  &.is-dark {
+    padding: 10px 16px;
+  }
+  &.has-description {
+    padding: 17px 16px;
+    align-items: start;
+    .el-alert__icon {
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+  }
+  .el-alert__title {
+    font-size: 14px;
+    line-height: 19px;
+    &.is-bold {
+      font-weight: 500;
+      font-size: 16px;
+      @include font_color('$1-color-1', .85);
+    }
+  }
+  
+  &.is-light {
+    .el-alert__icon {
+      font-size: 14px;
+      width: 14px;
+      &.is-big {
+        font-size: 21px;
+        width: 21px;
+      }
+    }
+    .el-alert__description {
+      font-size: 14px;
+      @include font_color('$1-color-1', .65);
+      line-height: 22px;
+    }
+    &.el-alert--success {
+      @include background_color('$3-color-2');
+      @include font_color('$1-color-1', .65);
+      @include border_color('$3-color-3');
+      border-width: 1px;
+      border-style: solid;
+      .el-alert__icon {
+        @include font_color('$3-color-1');
+      }
+    }
+    &.el-alert--info {
+      @include background_color('$1-color-7');
+      @include font_color('$1-color-1', .65);
+      @include border_color('$1-color-1', .25);
+      border-width: 1px;
+      border-style: solid;
+      // .el-alert__icon {
+      //   @include font_color('$3-color-1');
+      // }
+    }
+    &.el-alert--warning {
+      @include background_color('$4-color-2');
+      @include font_color('$1-color-1', .65);
+      @include border_color('$4-color-3');
+      border-width: 1px;
+      border-style: solid;
+      .el-alert__icon {
+        @include font_color('$4-color-1');
+      }
+    }
+    &.el-alert--error {
+      @include background_color('$5-color-2');
+      @include font_color('$1-color-1', .65);
+      @include border_color('$5-color-3');
+      border-width: 1px;
+      border-style: solid;
+      .el-alert__icon {
+        @include font_color('$5-color-1');
+      }
+    }
+  }
+  
+  .el-alert__closebtn {
+    top: 14px;
+    &.is-customed {
+      font-size: 14px;
+      top: 11px;
+    }
+  }
+  &.is-light .el-alert__closebtn {
+    @include font_color('$1-color-1', .45);
+  }
+}

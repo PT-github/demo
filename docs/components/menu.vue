@@ -2,7 +2,7 @@
  * @Author: PT
  * @Date: 2021-07-16 16:46:47
  * @LastEditors: PT
- * @LastEditTime: 2021-07-26 17:12:25
+ * @LastEditTime: 2021-07-28 15:46:33
  * @Description: file content
 -->
 <template>
@@ -113,7 +113,7 @@ export default {
               path: '/form'
             },
           ]
-        },{
+        }, {
           name: 'Data 组件',
           children: [
             {
@@ -143,6 +143,30 @@ export default {
             {
               name: 'Avatar 头像',
               path: '/avatar'
+            }
+          ]
+        }, {
+          name: 'Notice 组件',
+          children: [
+            {
+              name: 'Alert 表格',
+              path: '/alert'
+            },
+            {
+              name: 'Loading 加载',
+              path: '/loading'
+            },
+            {
+              name: 'Message 消息提示',
+              path: '/message'
+            },
+            {
+              name: 'MessageBox 弹窗',
+              path: '/message-box'
+            },
+            {
+              name: 'Notification 通知',
+              path: '/notification'
             }
           ]
         },

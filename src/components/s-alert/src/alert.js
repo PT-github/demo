@@ -10,15 +10,23 @@ export default {
   name: 'SAlert',
   render () {
     return (
-      <el-alert ref="alert" class="s-alert" {
-        ...{
-          attrs: {
-            ...this.$attrs
-          },
-          on: {
-            ...this.$listeners
+      <el-alert ref="alert"
+        class={
+          {
+            's-alert': true,
+            'has-description': this.$attrs.description
           }
-        }}>
+        }
+        {
+          ...{
+            attrs: {
+              ...this.$attrs
+            },
+            on: {
+              ...this.$listeners
+            }
+          }
+        }>
         { this.$slots.default }
         {
           this.$slots.title && (

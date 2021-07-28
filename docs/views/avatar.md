@@ -1,6 +1,3 @@
----
-pageClass: custom-avatar
----
 ## Avatar 头像
 
 用图标、图片或者字符的形式展示用户或事物信息。
@@ -39,12 +36,32 @@ pageClass: custom-avatar
       return {
         circleUrl: "https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png",
         squareUrl: "https://cube.elemecdn.com/9/c2/f0ee8a3c7c9638a54940382568c9dpng.png",
-        sizeList: ["large", "medium", "small"]
+        sizeList: ["large", "medium", 32, "small"]
       }
     }
   }
 </script>
-
+<style>
+  .sub-title {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #8492a6;
+  }
+  .demo-basic {
+    text-align: center;
+  }
+  .demo-basic--circle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .demo-basic .block {
+    flex: 1;
+  }
+  .demo-basic .block:not(:last-child) {
+    border-right: 1px solid rgba(224,230,237,0.5);
+  }
+</style>
 ```
 :::
 
@@ -57,16 +74,25 @@ pageClass: custom-avatar
 <template>
   <div class="demo-type">
     <div>
-      <s-avatar icon="el-icon-user-solid"></s-avatar>
+      <s-avatar :size="32" icon="el-icon-user"></s-avatar>
     </div>
     <div>
-      <s-avatar src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"></s-avatar>
+      <s-avatar :size="32" src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"></s-avatar>
     </div>
     <div>
-      <s-avatar> user </s-avatar>
+      <s-avatar :size="32" type="primary">U</s-avatar>
     </div>
   </div>
 </template>
+<style>
+  .demo-type {
+    display: flex;
+  }
+  .demo-type > div {
+    flex: 1;
+    text-align: center;
+  }
+</style>
 ```
 :::
 
@@ -79,12 +105,18 @@ pageClass: custom-avatar
 <template>
   <div class="demo-type">
     <s-avatar :size="60" src="https://empty" @error="errorHandler">
-      <img src="https://cube.elemecdn.com/e/fd/0fc7d20532fdaf769a25683617711png.png"/>
+      <img :src="src"/>
     </s-avatar>
   </div>
 </template>
 <script>
+  const image = require('../assets/images/empty.png')
   export default {
+    data () {
+      return {
+        src: image
+      }
+    },
     methods: {
       errorHandler() {
         return true
@@ -120,7 +152,24 @@ pageClass: custom-avatar
     }
   }
 </script>
-
+<style>
+  .demo-fit {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+  }
+  .demo-fit .block {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    flex-grow: 0;
+  }
+  .demo-fit .title {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #8492a6;
+  }
+</style>
 ```
 :::
 

@@ -1,1 +1,19 @@
-.s-badge {}
+.s-badge {
+  .el-badge__content {
+    border-radius: 12px; 
+    @include background_color('$5-color-1');
+    &.is-dot {
+      height: 6px;
+      width: 6px;
+      &.is-fixed {
+        right: 3px;
+      }
+    }
+  }
+  .el-badge__content--primary {
+    @include background_color('$2-color-1');
+  }
+  .el-badge__content--warning {
+    @include background_color('$4-color-1');
+  }
+}

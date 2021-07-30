@@ -19,9 +19,11 @@ export default {
 
     return (
       <s-table-column
+        
         {...{
           attrs: {
-            ...this.$attrs
+            ...this.$attrs,
+            className: this.$attrs.edittype ? 'column-edit__' + this.$attrs.edittype : ''
           },
           scopedSlots: {
             default: defaultScopedSlots,

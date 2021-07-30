@@ -92,7 +92,12 @@ export default {
     }
     // console.log(JSON.stringify(props.data), 'STableCon render ***********')
     return (
-      <div class="s-table-con">
+      <div class={
+        {
+          's-table-con': true,
+          's-table-con__iseditting': this.currentEditedRows.length > 0
+        }
+      }>
         <s-table ref="table" {
           ...{
             attrs: {
@@ -111,9 +116,12 @@ export default {
             columns &&
             columns.length > 0 &&
             columns.map(column => <s-table-column-con
+              
               {
                 ...{
-                  attrs: { ...column },
+                  attrs: {
+                    ...column,
+                  },
                   scopedSlots: { ...this.$scopedSlots }
                 }
               }

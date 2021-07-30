@@ -2,7 +2,7 @@
  * @Author: PT
  * @Date: 2021-07-16 16:46:47
  * @LastEditors: PT
- * @LastEditTime: 2021-07-29 18:18:28
+ * @LastEditTime: 2021-07-30 09:02:05
  * @Description: file content
 -->
 <template>
@@ -192,6 +192,30 @@ export default {
               name: 'Steps 步骤条',
               path: '/steps'
             }
+          ]
+        }, {
+          name: '组合组件',
+          children: [
+            {
+              name: 'TableCon 表格',
+              path: '/table-con'
+            },
+            // {
+            //   name: 'Tabs 标签页',
+            //   path: '/tabs'
+            // },
+            // {
+            //   name: 'Breadcrumb 面包屑',
+            //   path: '/breadcrumb'
+            // },
+            // {
+            //   name: 'Dropdown 下拉菜单',
+            //   path: '/dropdown'
+            // },
+            // {
+            //   name: 'Steps 步骤条',
+            //   path: '/steps'
+            // }
           ]
         },
       ]

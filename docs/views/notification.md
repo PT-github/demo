@@ -2,6 +2,10 @@
 
 悬浮出现在页面角落，显示全局的通知提醒消息。
 
+:::tip
+将 customClass 设置为 s-notification，即可使用组件已配置的样式
+:::
+
 ### 基本用法
 
 适用性广泛的通知栏
@@ -29,6 +33,7 @@
 
         this.$notify({
           title: '标题名称',
+          customClass: 's-notification',
           message: h('i', { style: 'color: teal'}, '这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案')
         });
       },
@@ -36,6 +41,7 @@
       open2() {
         this.$notify({
           title: '提示',
+          customClass: 's-notification',
           message: '这是一条不会自动关闭的消息',
           duration: 0
         });
@@ -81,6 +87,8 @@
       open1() {
         this.$notify({
           title: '成功',
+          customClass: 's-notification',
+          duration: 0,
           message: '这是一条成功的提示消息',
           type: 'success'
         });
@@ -89,6 +97,8 @@
       open2() {
         this.$notify({
           title: '警告',
+          customClass: 's-notification',
+          duration: 0,
           message: '这是一条警告的提示消息',
           type: 'warning'
         });
@@ -97,6 +107,8 @@
       open3() {
         this.$notify.info({
           title: '消息',
+          customClass: 's-notification',
+          duration: 0,
           message: '这是一条消息的提示消息'
         });
       },
@@ -104,6 +116,8 @@
       open4() {
         this.$notify.error({
           title: '错误',
+          customClass: 's-notification',
+          duration: 0,
           message: '这是一条错误的提示消息'
         });
       }
@@ -148,6 +162,7 @@
       open1() {
         this.$notify({
           title: '自定义位置',
+          customClass: 's-notification',
           message: '右上角弹出的消息'
         });
       },
@@ -155,6 +170,7 @@
       open2() {
         this.$notify({
           title: '自定义位置',
+          customClass: 's-notification',
           message: '右下角弹出的消息',
           position: 'bottom-right'
         });
@@ -163,6 +179,7 @@
       open3() {
         this.$notify({
           title: '自定义位置',
+          customClass: 's-notification',
           message: '左下角弹出的消息',
           position: 'bottom-left'
         });
@@ -171,6 +188,7 @@
       open4() {
         this.$notify({
           title: '自定义位置',
+          customClass: 's-notification',
           message: '左上角弹出的消息',
           position: 'top-left'
         });
@@ -201,6 +219,7 @@
       open() {
         this.$notify({
           title: '偏移',
+          customClass: 's-notification',
           message: '这是一条带有偏移的提示消息',
           offset: 100
         });
@@ -230,6 +249,7 @@
       open() {
         this.$notify({
           title: 'HTML 片段',
+          customClass: 's-notification',
           dangerouslyUseHTMLString: true,
           message: '<strong>这是 <i>HTML</i> 片段</strong>'
         });
@@ -264,6 +284,7 @@
       open() {
         this.$notify.success({
           title: 'Info',
+          customClass: 's-notification',
           message: '这是一条没有关闭按钮的消息',
           showClose: false
         });
@@ -276,17 +297,17 @@
 
 ### 全局方法
 
-ConUI 为 `Vue.prototype` 添加了全局方法 `$notify`。因此在 vue instance 中可以采用本页面中的方式调用 SNotification。
+ElementUI 为 `Vue.prototype` 添加了全局方法 `$notify`。因此在 vue instance 中可以采用本页面中的方式调用 Notification。
 
 ### 单独引用
 
 单独引入 Notification：
 
 ```javascript
-import { SNotification } from 'con-ui';
+import { Notification } from 'element-ui';
 ```
 
-此时调用方法为 `SNotification(options)`。我们也为每个 type 定义了各自的方法，如 `SNotification.success(options)`。并且可以调用 `SNotification.closeAll()` 手动关闭所有实例。
+此时调用方法为 `Notification(options)`。我们也为每个 type 定义了各自的方法，如 `Notification.success(options)`。并且可以调用 `Notification.closeAll()` 手动关闭所有实例。
 
 ### Options
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
@@ -301,11 +322,11 @@ import { SNotification } from 'con-ui';
 | position | 自定义弹出位置 | string | top-right/top-left/bottom-right/bottom-left | top-right |
 | showClose | 是否显示关闭按钮 | boolean | — | true |
 | onClose | 关闭时的回调函数 | function | — | — |
-| onClick | 点击 SNotification 时的回调函数 | function | — | — |
-| offset | 偏移的距离，在同一时刻，所有的 SNotification 实例应当具有一个相同的偏移量 | number | — | 0 |
+| onClick | 点击 Notification 时的回调函数 | function | — | — |
+| offset | 偏移的距离，在同一时刻，所有的 Notification 实例应当具有一个相同的偏移量 | number | — | 0 |
 
 ### 方法
-调用 `SNotification` 或 `this.$notify` 会返回当前 SNotification 的实例。如果需要手动关闭实例，可以调用它的 `close` 方法。
+调用 `Notification` 或 `this.$notify` 会返回当前 Notification 的实例。如果需要手动关闭实例，可以调用它的 `close` 方法。
 | 方法名 | 说明 |
 | ---- | ---- |
-| close | 关闭当前的 SNotification |
+| close | 关闭当前的 Notification |

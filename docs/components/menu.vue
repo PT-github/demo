@@ -2,7 +2,7 @@
  * @Author: PT
  * @Date: 2021-07-16 16:46:47
  * @LastEditors: PT
- * @LastEditTime: 2021-07-28 15:46:33
+ * @LastEditTime: 2021-07-29 18:18:28
  * @Description: file content
 -->
 <template>
@@ -149,7 +149,7 @@ export default {
           name: 'Notice 组件',
           children: [
             {
-              name: 'Alert 表格',
+              name: 'Alert 警告',
               path: '/alert'
             },
             {
@@ -167,6 +167,30 @@ export default {
             {
               name: 'Notification 通知',
               path: '/notification'
+            }
+          ]
+        }, {
+          name: 'Navigation 组件',
+          children: [
+            {
+              name: 'Menu 导航菜单',
+              path: '/menu'
+            },
+            {
+              name: 'Tabs 标签页',
+              path: '/tabs'
+            },
+            {
+              name: 'Breadcrumb 面包屑',
+              path: '/breadcrumb'
+            },
+            {
+              name: 'Dropdown 下拉菜单',
+              path: '/dropdown'
+            },
+            {
+              name: 'Steps 步骤条',
+              path: '/steps'
             }
           ]
         },

@@ -2,6 +2,10 @@
 
 常用于主动操作后的反馈提示。与 Notification 的区别是后者更多用于系统级通知的被动提醒。
 
+:::tip
+将 customClass 设置为 s-message，即可使用组件已配置的样式
+:::
+
 ### 基础用法
 
 从顶部出现，3 秒后自动消失。
@@ -18,7 +22,10 @@
   export default {
     methods: {
       open() {
-        this.$message('这是一条消息提示');
+        this.$message({
+          message: '这是一条消息提示',
+          customClass: 's-message'
+        });
       },
 
       openVn() {
@@ -27,7 +34,8 @@
           message: h('p', null, [
             h('span', null, '内容可以是 '),
             h('i', { style: 'color: teal' }, 'VNode')
-          ])
+          ]),
+          customClass: 's-message'
         });
       }
     }
@@ -53,24 +61,33 @@
   export default {
     methods: {
       open1() {
-        this.$message('这是一条消息提示');
+        this.$message({
+          message: '这是一条消息提示',
+          customClass: 's-message'
+        });
       },
       open2() {
         this.$message({
           message: '恭喜你，这是一条成功消息',
-          type: 'success'
+          type: 'success',
+          customClass: 's-message'
         });
       },
 
       open3() {
         this.$message({
           message: '警告哦，这是一条警告消息',
-          type: 'warning'
+          type: 'warning',
+          customClass: 's-message'
         });
       },
 
       open4() {
-        this.$message.error('错了哦，这是一条错误消息');
+        this.$message({
+          message: '错了哦，这是一条错误消息',
+          type: 'error',
+          customClass: 's-message'
+        });
       }
     }
   }
@@ -97,7 +114,8 @@
       open1() {
         this.$message({
           showClose: true,
-          message: '这是一条消息提示'
+          message: '这是一条消息提示',
+          customClass: 's-message'
         });
       },
 
@@ -105,7 +123,8 @@
         this.$message({
           showClose: true,
           message: '恭喜你，这是一条成功消息',
-          type: 'success'
+          type: 'success',
+          customClass: 's-message'
         });
       },
 
@@ -113,7 +132,8 @@
         this.$message({
           showClose: true,
           message: '警告哦，这是一条警告消息',
-          type: 'warning'
+          type: 'warning',
+          customClass: 's-message'
         });
       },
 
@@ -121,7 +141,8 @@
         this.$message({
           showClose: true,
           message: '错了哦，这是一条错误消息',
-          type: 'error'
+          type: 'error',
+          customClass: 's-message'
         });
       }
     }
@@ -146,7 +167,8 @@
       openCenter() {
         this.$message({
           message: '居中的文字',
-          center: true
+          center: true,
+          customClass: 's-message'
         });
       }
     }
@@ -171,7 +193,8 @@
       openHTML() {
         this.$message({
           dangerouslyUseHTMLString: true,
-          message: '<strong>这是 <i>HTML</i> 片段</strong>'
+          message: '<strong>这是 <i>HTML</i> 片段</strong>',
+          customClass: 's-message'
         });
       }
     }
@@ -186,17 +209,17 @@
 
 ### 全局方法
 
-ConUI 为 Vue.prototype 添加了全局方法 $message。因此在 vue instance 中可以采用本页面中的方式调用 `SMessage`。
+ElementUI 为 Vue.prototype 添加了全局方法 $message。因此在 vue instance 中可以采用本页面中的方式调用 `Message`。
 
 ### 单独引用
 
-单独引入 `SMessage`：
+单独引入 `Message`：
 
 ```javascript
-import { SMessage } from 'element-ui';
+import { Message } from 'element-ui';
 ```
 
-此时调用方法为 `SMessage(options)`。我们也为每个 type 定义了各自的方法，如 `SMessage.success(options)`。并且可以调用 `SMessage.closeAll()` 手动关闭所有实例。
+此时调用方法为 `Message(options)`。我们也为每个 type 定义了各自的方法，如 `Message.success(options)`。并且可以调用 `Message.closeAll()` 手动关闭所有实例。
 
 ### Options
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
@@ -213,7 +236,7 @@ import { SMessage } from 'element-ui';
 | offset | Message 距离窗口顶部的偏移量 | number | — | 20 |
 
 ### 方法
-调用 `SMessage` 或 `this.$message` 会返回当前 SMessage 的实例。如果需要手动关闭实例，可以调用它的 `close` 方法。
+调用 `Message` 或 `this.$message` 会返回当前 Message 的实例。如果需要手动关闭实例，可以调用它的 `close` 方法。
 | 方法名 | 说明 |
 | ---- | ---- |
-| close | 关闭当前的 SMessage |
+| close | 关闭当前的 Message |

@@ -1,5 +1,6 @@
 .s-alert {
   padding: 9px 16px;
+  border-radius: 2px;
   &.is-dark {
     padding: 10px 16px;
   }
@@ -35,6 +36,16 @@
       @include font_color('$1-color-1', .65);
       line-height: 22px;
     }
+    // &.el-alert--primary {
+    //   @include background_color('$2-color-2');
+    //   @include font_color('$1-color-1', .65);
+    //   @include border_color('$2-color-3');
+    //   border-width: 1px;
+    //   border-style: solid;
+    //   .el-alert__icon {
+    //     @include font_color('$2-color-1');
+    //   }
+    // }
     &.el-alert--success {
       @include background_color('$3-color-2');
       @include font_color('$1-color-1', .65);
@@ -46,14 +57,14 @@
       }
     }
     &.el-alert--info {
-      @include background_color('$1-color-7');
+      @include background_color('$2-color-2');
       @include font_color('$1-color-1', .65);
-      @include border_color('$1-color-1', .25);
+      @include border_color('$2-color-3');
       border-width: 1px;
       border-style: solid;
-      // .el-alert__icon {
-      //   @include font_color('$3-color-1');
-      // }
+      .el-alert__icon {
+        @include font_color('$2-color-1');
+      }
     }
     &.el-alert--warning {
       @include background_color('$4-color-2');
@@ -86,5 +97,11 @@
   }
   &.is-light .el-alert__closebtn {
     @include font_color('$1-color-1', .45);
+  }
+  &.is-light .el-alert__closebtn {
+    &.is-customed {
+      @include font_color('$2-color-1');
+    }
+    
   }
 }

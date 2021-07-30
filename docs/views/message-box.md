@@ -3,6 +3,8 @@
 
 :::tip
 从场景上说，MessageBox 的作用是美化系统自带的 `alert`、`confirm` 和 `prompt`，因此适合展示较为简单的内容。如果需要弹出较为复杂的内容，请使用 Dialog。
+
+将 `customClass` 设置为 `s-message-box`，即可使用组件已配置的样式
 :::
 
 ### 消息提示
@@ -21,6 +23,7 @@
       open() {
         this.$alert('这是一段内容', '标题名称', {
           confirmButtonText: '确定',
+          customClass: 's-message-box',
           callback: action => {
             this.$message({
               type: 'info',
@@ -53,6 +56,7 @@
         this.$confirm('此操作将永久删除该文件, 是否继续?', '提示', {
           confirmButtonText: '确定',
           cancelButtonText: '取消',
+          customClass: 's-message-box',
           type: 'warning'
         }).then(() => {
           this.$message({
@@ -91,7 +95,8 @@
           confirmButtonText: '确定',
           cancelButtonText: '取消',
           inputPattern: /[\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*@(?:[\w](?:[\w-]*[\w])?\.)+[\w](?:[\w-]*[\w])?/,
-          inputErrorMessage: '邮箱格式不正确'
+          inputErrorMessage: '邮箱格式不正确',
+          customClass: 's-message-box',
         }).then(({ value }) => {
           this.$message({
             type: 'success',
@@ -135,6 +140,7 @@
           showCancelButton: true,
           confirmButtonText: '确定',
           cancelButtonText: '取消',
+          customClass: 's-message-box',
           beforeClose: (action, instance, done) => {
             if (action === 'confirm') {
               instance.confirmButtonLoading = true;
@@ -182,7 +188,8 @@
     methods: {
       open() {
         this.$alert('<strong>这是 <i>HTML</i> 片段</strong>', 'HTML 片段', {
-          dangerouslyUseHTMLString: true
+          dangerouslyUseHTMLString: true,
+          customClass: 's-message-box',
         });
       }
     }
@@ -213,7 +220,8 @@
         this.$confirm('检测到未保存的内容，是否在离开页面前保存修改？', '确认信息', {
           distinguishCancelAndClose: true,
           confirmButtonText: '保存',
-          cancelButtonText: '放弃修改'
+          cancelButtonText: '放弃修改',
+          customClass: 's-message-box',
         })
           .then(() => {
             this.$message({
@@ -236,10 +244,14 @@
 ```
 :::
 
-### 居中布局
+### 带ICON的提示框
 内容支持居中布局
+:::tip
+这种展现形式是由element-ui的`center`居中布局进行改造
+:::
 
-:::demo 将 `center` 设置为 `true` 即可开启居中布局
+
+:::demo 将 `center` 设置为 `true` 
 
 ```html
 <template>
@@ -254,6 +266,7 @@
           confirmButtonText: '确定',
           cancelButtonText: '取消',
           type: 'warning',
+          customClass: 's-message-box',
           center: true
         }).then(() => {
           this.$message({
@@ -273,23 +286,8 @@
 ```
 :::
 
-### 全局方法
 
-如果你完整引入了 ConUI，它会为 Vue.prototype 添加如下全局方法：$msgbox, $alert, $confirm 和 $prompt。因此在 Vue instance 中可以采用本页面中的方式调用 `MessageBox`。调用参数为：
-- `$msgbox(options)`
-- `$alert(message, title, options)` 或 `$alert(message, options)`
-- `$confirm(message, title, options)` 或 `$confirm(message, options)`
-- `$prompt(message, title, options)` 或 `$prompt(message, options)`
-
-### 单独引用
-
-如果单独引入 `MessageBox`：
-
-```javascript
-import { SMessageBox } from 'con-ui';
-```
-
-那么对应于上述四个全局方法的调用方法依次为：SMessageBox, SMessageBox.alert, SMessageBox.confirm 和 SMessageBox.prompt，调用参数与全局方法相同。
+那么对应于上述四个全局方法的调用方法依次为：MessageBox, MessageBox.alert, MessageBox.confirm 和 MessageBox.prompt，调用参数与全局方法相同。
 
 ### Options
 

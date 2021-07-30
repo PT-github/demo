@@ -1,0 +1,21 @@
+.s-message {
+  @include background_color('$0-color-1');
+  border-radius: 2px;
+  border: none;
+  padding: 12px 16px;
+  box-shadow: 0px 9px 28px 8px rgba(0, 0, 0, 0.05),
+    0px 6px 16px 0px rgba(0, 0, 0, 0.08), 0px 3px 6px -4px rgba(0, 0, 0, 0.12);
+  .el-icon-info,
+  .el-message__content {
+    @include font_color('$1-color-1', .65);
+  }
+  .el-icon-success {
+    @include font_color('$3-color-1')
+  }
+  .el-icon-warning {
+    @include font_color('$4-color-1')
+  }
+  .el-icon-error {
+    @include font_color('$5-color-1')
+  }
+}

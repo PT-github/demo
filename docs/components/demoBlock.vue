@@ -2,7 +2,7 @@
  * @Author: PT
  * @Date: 2021-07-16 10:36:16
  * @LastEditors: PT
- * @LastEditTime: 2021-07-21 10:37:57
+ * @LastEditTime: 2021-07-29 10:49:42
  * @Description: file content
 -->
 <template>
@@ -135,10 +135,13 @@ export default {
   display: inline-block;
   padding: 3px 7px;
   border-radius: 3px;
-  height: 1.8;
-  /* line-height: 18px; */
+  height: 18px;
+  line-height: 18px;
   font-family: Menlo, Monaco, Consolas, Courier, monospace;
   font-size: 12px;
+}
+.demo-block .demo-block-meta p {
+  line-height: 30px;
 }
 .demo-block .demo-block-code {
   background-color: #fafafa;

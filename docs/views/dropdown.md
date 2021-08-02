@@ -17,8 +17,8 @@
     <s-dropdown-item>下拉选项</s-dropdown-item>
     <s-dropdown-item>下拉选项</s-dropdown-item>
     <s-dropdown-item>下拉选项</s-dropdown-item>
-    <!-- <s-dropdown-item disabled>双皮奶</s-dropdown-item> -->
-    <!-- <s-dropdown-item divided>蚵仔煎</s-dropdown-item> -->
+    <s-dropdown-item disabled>双皮奶</s-dropdown-item>
+    <s-dropdown-item divided>蚵仔煎</s-dropdown-item>
   </s-dropdown-menu>
 </s-dropdown>
 

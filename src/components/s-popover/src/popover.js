@@ -2,7 +2,7 @@
  * @Author: PT
  * @Date: 2020-10-10 09:16:54
  * @LastEditors: PT
- * @LastEditTime: 2020-10-10 09:17:44
+ * @LastEditTime: 2021-08-02 17:44:52
  * @Description: SPopover
  */
 
@@ -15,6 +15,7 @@ export default {
       <el-popover ref="popover" class="s-popover" {
         ...{
           attrs: {
+            popperClass: 's-popover-popper',
             ...this.$attrs
           },
           on: {

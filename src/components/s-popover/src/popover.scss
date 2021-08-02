@@ -1,1 +1,24 @@
-.s-popover {}
+.s-popover-popper {
+  @include font_color('$1-color-1', .65);
+  box-shadow: 0px 9px 28px 8px rgba(0,0,0,0.05), 0px 6px 16px 0px rgba(0,0,0,0.08), 0px 3px 6px -4px rgba(0,0,0,0.12);
+  border: none;
+  line-height: 22px;
+  padding: 8px;
+  .el-popover__title {
+    font-size: 14px;
+    @include font_color('$1-color-1', .85);
+    font-weight: 500;
+    line-height: 32px;
+    position: relative;
+    margin-bottom: 8px;
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      height: 1px;
+      left: -8px;
+      right: -8px;
+      @include background_color('$1-color-1', .06);
+    }
+  }
+}

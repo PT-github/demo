@@ -2,7 +2,7 @@
  * @Author: PT
  * @Date: 2021-07-16 16:46:47
  * @LastEditors: PT
- * @LastEditTime: 2021-08-02 11:35:14
+ * @LastEditTime: 2021-08-02 15:53:52
  * @Description: file content
 -->
 <template>
@@ -200,10 +200,10 @@ export default {
               name: 'Tooltip 文字提示',
               path: '/tooltip'
             },
-            // {
-            //   name: 'Tabs 标签页',
-            //   path: '/tabs'
-            // },
+            {
+              name: 'Popover 弹出框',
+              path: '/popover'
+            },
             // {
             //   name: 'Breadcrumb 面包屑',
             //   path: '/breadcrumb'

@@ -2,7 +2,7 @@
  * @Author: PT
  * @Date: 2021-07-16 16:46:47
  * @LastEditors: PT
- * @LastEditTime: 2021-08-02 15:53:52
+ * @LastEditTime: 2021-08-02 18:04:53
  * @Description: file content
 -->
 <template>
@@ -204,10 +204,10 @@ export default {
               name: 'Popover 弹出框',
               path: '/popover'
             },
-            // {
-            //   name: 'Breadcrumb 面包屑',
-            //   path: '/breadcrumb'
-            // },
+            {
+              name: 'Timeline 时间线',
+              path: '/timeline'
+            },
             // {
             //   name: 'Dropdown 下拉菜单',
             //   path: '/dropdown'

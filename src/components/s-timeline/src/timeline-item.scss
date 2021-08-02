@@ -1,1 +1,28 @@
-.s-timeline-item {}
+.s-timeline-item {
+  .el-timeline-item__content {
+    @include font_color("$1-color-1", 0.65);
+  }
+  .el-timeline-item__wrapper {
+    padding-left: 17px;
+  }
+  &:not(.s-timeline-item-custom) {
+    .el-timeline-item__node {
+      @include background_color("$0-color-1");
+      @include border_color("$2-color-1");
+      border-width: 2px;
+      border-style: solid;
+      box-sizing: border-box;
+      &.el-timeline-item__node--normal {
+        width: 10px;
+        height: 10px;
+        left: 0;
+      }
+    }
+  }
+  
+  .el-timeline-item__tail {
+    @include themeify {
+      border-left-color: themed("$1-color-1", 0.06);
+    }
+  }
+}

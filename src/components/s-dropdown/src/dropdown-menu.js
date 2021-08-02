@@ -2,7 +2,7 @@
  * @Author: PT
  * @Date: 2020-10-12 10:20:28
  * @LastEditors: PT
- * @LastEditTime: 2021-07-15 15:10:22
+ * @LastEditTime: 2021-08-02 10:30:30
  * @Description: SDropdownMenu
  */
 import './styles/dropdown-menu.scss'
@@ -13,7 +13,8 @@ export default {
       <el-dropdown-menu ref="dropdown-menu" class="s-dropdown-menu" {
         ...{
           attrs: {
-            ...this.$attrs
+            ...this.$attrs,
+            visibleArrow: false
           },
           on: {
             ...this.$listeners

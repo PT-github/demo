@@ -2,7 +2,7 @@
  * @Author: PT
  * @Date: 2020-10-12 10:20:28
  * @LastEditors: PT
- * @LastEditTime: 2021-07-15 15:10:36
+ * @LastEditTime: 2021-08-02 10:25:24
  * @Description: SDropdown
  */
 
@@ -14,7 +14,8 @@ export default {
       <el-dropdown ref="dropdown" class="s-dropdown" {
         ...{
           attrs: {
-            ...this.$attrs
+            ...this.$attrs,
+            visibleArrow: false
           },
           on: {
             ...this.$listeners

@@ -14,11 +14,11 @@
     下拉菜单<i class="el-icon-arrow-down el-icon--right"></i>
   </span>
   <s-dropdown-menu slot="dropdown">
-    <s-dropdown-item>黄金糕</s-dropdown-item>
-    <s-dropdown-item>狮子头</s-dropdown-item>
-    <s-dropdown-item>螺蛳粉</s-dropdown-item>
-    <s-dropdown-item disabled>双皮奶</s-dropdown-item>
-    <s-dropdown-item divided>蚵仔煎</s-dropdown-item>
+    <s-dropdown-item>下拉选项</s-dropdown-item>
+    <s-dropdown-item>下拉选项</s-dropdown-item>
+    <s-dropdown-item>下拉选项</s-dropdown-item>
+    <!-- <s-dropdown-item disabled>双皮奶</s-dropdown-item> -->
+    <!-- <s-dropdown-item divided>蚵仔煎</s-dropdown-item> -->
   </s-dropdown-menu>
 </s-dropdown>
 
@@ -31,6 +31,112 @@
     font-size: 12px;
   }
 </style>
+```
+:::
+
+### 不同尺寸按钮
+
+不同尺寸按钮触发下拉菜单。
+
+:::demo 
+
+```html
+<s-dropdown class="dropdown-demo1">
+  <s-button type="primary">
+    更多菜单<i class="el-icon-arrow-down el-icon--right"></i>
+  </s-button>
+  <s-dropdown-menu slot="dropdown">
+    <s-dropdown-item>黄金糕</s-dropdown-item>
+    <s-dropdown-item>狮子头</s-dropdown-item>
+    <s-dropdown-item>螺蛳粉</s-dropdown-item>
+    <s-dropdown-item>双皮奶</s-dropdown-item>
+    <s-dropdown-item>蚵仔煎</s-dropdown-item>
+  </s-dropdown-menu>
+</s-dropdown>
+
+<s-dropdown class="dropdown-demo1">
+  <s-button type="primary" size="small">
+    更多菜单<i class="el-icon-arrow-down el-icon--right"></i>
+  </s-button>
+  <s-dropdown-menu slot="dropdown">
+    <s-dropdown-item>黄金糕</s-dropdown-item>
+    <s-dropdown-item>狮子头</s-dropdown-item>
+    <s-dropdown-item>螺蛳粉</s-dropdown-item>
+    <s-dropdown-item>双皮奶</s-dropdown-item>
+    <s-dropdown-item>蚵仔煎</s-dropdown-item>
+  </s-dropdown-menu>
+</s-dropdown>
+
+<s-dropdown class="dropdown-demo1">
+  <s-button type="primary" size="mini">
+    更多菜单<i class="el-icon-arrow-down el-icon--right"></i>
+  </s-button>
+  <s-dropdown-menu slot="dropdown">
+    <s-dropdown-item>黄金糕</s-dropdown-item>
+    <s-dropdown-item>狮子头</s-dropdown-item>
+    <s-dropdown-item>螺蛳粉</s-dropdown-item>
+    <s-dropdown-item>双皮奶</s-dropdown-item>
+    <s-dropdown-item>蚵仔煎</s-dropdown-item>
+  </s-dropdown-menu>
+</s-dropdown>
+<s-dropdown class="dropdown-demo1">
+  <s-button>
+    更多菜单<i class="el-icon-arrow-down el-icon--right"></i>
+  </s-button>
+  <s-dropdown-menu slot="dropdown">
+    <s-dropdown-item>黄金糕</s-dropdown-item>
+    <s-dropdown-item>狮子头</s-dropdown-item>
+    <s-dropdown-item>螺蛳粉</s-dropdown-item>
+    <s-dropdown-item>双皮奶</s-dropdown-item>
+    <s-dropdown-item>蚵仔煎</s-dropdown-item>
+  </s-dropdown-menu>
+</s-dropdown>
+
+<s-dropdown class="dropdown-demo1">
+  <s-button size="small">
+    更多菜单<i class="el-icon-arrow-down el-icon--right"></i>
+  </s-button>
+  <s-dropdown-menu slot="dropdown">
+    <s-dropdown-item>黄金糕</s-dropdown-item>
+    <s-dropdown-item>狮子头</s-dropdown-item>
+    <s-dropdown-item>螺蛳粉</s-dropdown-item>
+    <s-dropdown-item>双皮奶</s-dropdown-item>
+    <s-dropdown-item>蚵仔煎</s-dropdown-item>
+  </s-dropdown-menu>
+</s-dropdown>
+
+<s-dropdown class="dropdown-demo1">
+  <s-button size="mini">
+    更多菜单<i class="el-icon-arrow-down el-icon--right"></i>
+  </s-button>
+  <s-dropdown-menu slot="dropdown">
+    <s-dropdown-item>黄金糕</s-dropdown-item>
+    <s-dropdown-item>狮子头</s-dropdown-item>
+    <s-dropdown-item>螺蛳粉</s-dropdown-item>
+    <s-dropdown-item>双皮奶</s-dropdown-item>
+    <s-dropdown-item>蚵仔煎</s-dropdown-item>
+  </s-dropdown-menu>
+</s-dropdown>
+<style>
+  .dropdown-demo1 {
+    vertical-align: middle;
+  }
+  .dropdown-demo1 + .dropdown-demo1 {
+    margin-left: 15px;
+  }
+  
+</style>
+
+<script>
+  export default {
+    methods: {
+      handleClick() {
+        alert('button click');
+      }
+    }
+  }
+</script>
+
 ```
 :::
 

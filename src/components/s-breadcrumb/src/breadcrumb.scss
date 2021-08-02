@@ -1,1 +1,16 @@
-.s-breadcrumb {}
+.s-breadcrumb {
+  .el-breadcrumb__inner a, .el-breadcrumb__inner.is-link {
+    @include font_color('$1-color-1', .45);
+    font-weight: 400;
+  }
+  .el-breadcrumb__separator {
+    @include font_color('$1-color-1', .45);
+    margin: 0 8px;
+  }
+  .el-breadcrumb__inner {
+    @include font_color('$1-color-1', .45);
+  }
+  .el-breadcrumb__item:last-child .el-breadcrumb__inner {
+    @include font_color('$1-color-1', .65);
+  }
+}

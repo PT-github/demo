@@ -1,1 +1,5 @@
-.s-dropdown-item {}
+.s-dropdown-item {
+  @include font_color('$1-color-1', .65);
+  line-height: 35px;
+  padding: 0 24px;
+}

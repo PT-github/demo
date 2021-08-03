@@ -1,1 +1,6 @@
-.s-collapse {}
+.s-collapse {
+  border-width: 1px;
+  border-style: solid;
+  @include border_color('$1-color-1', .15);
+  border-radius: 2px;
+}

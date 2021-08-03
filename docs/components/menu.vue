@@ -2,7 +2,7 @@
  * @Author: PT
  * @Date: 2021-07-16 16:46:47
  * @LastEditors: PT
- * @LastEditTime: 2021-08-02 18:04:53
+ * @LastEditTime: 2021-08-03 08:58:31
  * @Description: file content
 -->
 <template>
@@ -203,6 +203,10 @@ export default {
             {
               name: 'Popover 弹出框',
               path: '/popover'
+            },
+            {
+              name: 'Collapse 折叠面板',
+              path: '/collapse'
             },
             {
               name: 'Timeline 时间线',

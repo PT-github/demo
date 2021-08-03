@@ -1,1 +1,12 @@
-.s-backtop {}
+.s-backtop {
+  // font-size: 40px;
+  @include font_color('$0-color-1');
+  @include background_color('$1-color-1', .45);
+  &:hover {
+    @include background_color('$2-color-1');
+  }
+  // box-shadow: none;
+  &.s-backtop--rect {
+    border-radius: 2px;
+  }
+}

@@ -2,7 +2,7 @@
  * @Author: PT
  * @Date: 2021-07-16 16:46:47
  * @LastEditors: PT
- * @LastEditTime: 2021-08-03 09:54:58
+ * @LastEditTime: 2021-08-03 10:09:22
  * @Description: file content
 -->
 <template>
@@ -215,6 +215,10 @@ export default {
             {
               name: 'Divider 分割线',
               path: '/divider'
+            },
+            {
+              name: 'Backtop 回到顶部',
+              path: '/backtop'
             },
             // {
             //   name: 'Dropdown 下拉菜单',

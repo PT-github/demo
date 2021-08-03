@@ -129,9 +129,9 @@
   :on-remove="handleRemove">
   <i class="el-icon-plus"></i>
 </s-upload>
-<s-dialog :visible.sync="dialogVisible">
+<el-dialog :visible.sync="dialogVisible">
   <img width="100%" :src="dialogImageUrl" alt="">
-</s-dialog>
+</el-dialog>
 <script>
   export default {
     data() {

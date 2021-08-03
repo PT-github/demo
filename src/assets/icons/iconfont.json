@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "791946",
+      "name": "返回顶部",
+      "font_class": "ai-top",
+      "unicode": "e65a",
+      "unicode_decimal": 58970
+    },
+    {
       "icon_id": "4765897",
       "name": "location",
       "font_class": "location",

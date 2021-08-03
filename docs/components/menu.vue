@@ -2,7 +2,7 @@
  * @Author: PT
  * @Date: 2021-07-16 16:46:47
  * @LastEditors: PT
- * @LastEditTime: 2021-08-03 08:58:31
+ * @LastEditTime: 2021-08-03 09:54:58
  * @Description: file content
 -->
 <template>
@@ -211,6 +211,10 @@ export default {
             {
               name: 'Timeline 时间线',
               path: '/timeline'
+            },
+            {
+              name: 'Divider 分割线',
+              path: '/divider'
             },
             // {
             //   name: 'Dropdown 下拉菜单',

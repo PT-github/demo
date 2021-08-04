@@ -2,7 +2,7 @@
  * @Author: PT
  * @Date: 2021-07-16 16:46:47
  * @LastEditors: PT
- * @LastEditTime: 2021-08-03 10:09:22
+ * @LastEditTime: 2021-08-03 16:22:47
  * @Description: file content
 -->
 <template>
@@ -236,22 +236,22 @@ export default {
               name: 'TableCon 表格',
               path: '/table-con'
             },
-            // {
-            //   name: 'Tabs 标签页',
-            //   path: '/tabs'
-            // },
-            // {
-            //   name: 'Breadcrumb 面包屑',
-            //   path: '/breadcrumb'
-            // },
-            // {
-            //   name: 'Dropdown 下拉菜单',
-            //   path: '/dropdown'
-            // },
-            // {
-            //   name: 'Steps 步骤条',
-            //   path: '/steps'
-            // }
+            {
+              name: 'RadioCon 单选框组',
+              path: '/radio-con'
+            },
+            {
+              name: 'CheckboxCon 多选框组',
+              path: '/checkbox-con'
+            },
+            {
+              name: 'SelectCon 选择器',
+              path: '/select-con'
+            },
+            {
+              name: 'FormCon 表单',
+              path: '/form-con'
+            }
           ]
         },
       ]

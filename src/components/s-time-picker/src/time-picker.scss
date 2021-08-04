@@ -1,24 +1,67 @@
-
-
 .s-time-picker {
-  .el-input__inner {
-    @include border_color($color: '$1-color-1', $opacity:.15);
-    @include font_color($color: '$1-color-1', $opacity: .65);
-    @include placeholder_color($color: "$1-color-1", $opacity: .25);
-    border-radius: 2px;
+
+  &.el-date-editor--time {
     font-size: 16px;
-  }
-  &.el-input--mini {
-    font-size: 14px;
-    .el-input__inner, .el-input__icon {
-      height: 24px;
-      line-height: 24px;
+    .el-input__inner {
+      @include border_color($color: '$1-color-1', $opacity:.15);
+      @include font_color($color: '$1-color-1', $opacity: .65);
+      @include placeholder_color($color: "$1-color-1", $opacity: .25);
+      border-radius: 2px;
+    }
+    .el-input__prefix, .el-input__suffix {
+      @include font_color($color: '$1-color-1', $opacity: .25);
+    }
+    &.el-input--small {
       font-size: 14px;
     }
+    &.el-input--mini {
+      font-size: 14px;
+      .el-input__inner {
+        height: 24px;
+      }
+      .el-input__icon {
+        line-height: 24px;
+      }
+    }
   }
-  // .el-icon-error:before {
-  //   @include font_color($color: "$1-color-1", $opacity: 0.45);
-  // }
+  &.el-date-editor--timerange {
+    @include border_color($color: '$1-color-1', $opacity:.15);
+    border-radius: 2px;
+    .el-range-input {
+      @include placeholder_color($color: "$1-color-1", $opacity: .25);
+      @include font_color($color: '$1-color-1', $opacity:.65);
+    }
+    .el-range__icon, .el-range-separator, .el-range__close-icon, .el-range-input {
+      font-size: 16px;
+    }
+    .el-range__icon, .el-range__close-icon, .el-range-separator {
+      @include font_color($color: '$1-color-1', $opacity: .25);
+    }
+    &.el-range-editor--medium {
+      .el-range__icon, .el-range-separator, .el-range__close-icon, .el-range-input {
+        font-size: 16px;
+      }
+    }
+    &.el-range-editor--small {
+      .el-range__icon, .el-range-separator, .el-range__close-icon, .el-range-input {
+        font-size: 14px;
+      }
+    }
+    &.el-range-editor--mini {
+      height: 24px;
+      .el-range__close-icon, .el-range__icon, .el-range-separator {
+        line-height: 16px;
+      }
+      .el-range__icon, .el-range-separator, .el-range__close-icon, .el-range-input {
+        font-size: 14px;
+      }
+    }
+    &.is-disabled {
+      @include background_color($color: "$1-color-1", $opacity: 0.04);
+      @include border_color($color: "$1-color-1", $opacity: 0.15);
+      
+    }
+  }
 }
 
 .s-time-picker-popper {

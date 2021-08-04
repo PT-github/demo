@@ -3,6 +3,10 @@
   .el-checkbox__label {
     vertical-align: middle;
     font-size: 16px;
+    line-height: 16px;
+  }
+  .el-checkbox__input {
+    height: 16px;
   }
   &.is-bordered.is-checked{
     @include border_color($color: '$2-color-1');

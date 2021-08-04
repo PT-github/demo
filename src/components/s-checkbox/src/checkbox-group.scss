@@ -25,4 +25,43 @@
     font-size: 14px;
     padding: 4px 7px;
   }
+
+  &.s-checkbox-group--small {
+    .s-checkbox {
+      .el-checkbox__input {
+        height: 14px;
+      }
+      .el-checkbox__inner {
+        width: 14px;
+        height: 14px;
+        &:after {
+          top: 0px;
+          left: 3px;
+        }
+      }
+      .el-checkbox__label {
+        font-size: 14px;
+        line-height: 14px;
+      }
+    }
+  }
+  &.s-checkbox-group--mini {
+    .s-checkbox {
+      .el-checkbox__input {
+        height: 12px;
+      }
+      .el-checkbox__inner {
+        width: 12px;
+        height: 12px;
+        &:after {
+          top: 0px;
+          left: 3px;
+        }
+      }
+      .el-checkbox__label {
+        font-size: 14px;
+        line-height: 14px;
+      }
+    }
+  }
 }

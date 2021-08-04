@@ -1,14 +1,55 @@
 .s-input-number{
+  .el-input-number__decrease, .el-input-number__increase {
+    @include background_color('$1-color-1', .04);
+    @include border_color($color: '$1-color-1', $opacity:.15);
+    &.is-disabled {
+      @include font_color($color: '$1-color-1', $opacity:.15);
+    }
+  }
   &.el-input-number--mini {
     width: 88px;
+    line-height: 22px;
+    .el-input__inner {
+      height: 24px;
+      line-height: 24px;
+    }
   }
-  &.is-controls-right .el-input__inner{
-    text-align: left
+  &.is-controls-right {
+    .el-input__inner{
+      text-align: left
+    }
+    .el-input-number__increase {
+      border-radius: 0 2px 0 0;
+    }
+    .el-input-number__decrease {
+      border-radius: 0 0 2px;
+    }
+    &[class*=mini] [class*=decrease] {
+      height: 11px;
+      line-height: 10px;
+    }
+    &[class*=mini] [class*=increase] {
+      height: 11px;
+      line-height: 11px;
+    }
   }
+  
   .el-input__inner {
     @include border_color($color: '$1-color-1', $opacity:.15);
     @include font_color($color: '$1-color-1', $opacity:.65);
     @include placeholder_color($color: "$1-color-1", $opacity: .25);
     border-radius: 2px;
+  }
+  &.is-disabled {
+    .el-input__inner {
+      @include background_color($color: "$1-color-1", $opacity: 0.04);
+      @include border_color($color: "$1-color-1", $opacity: 0.15);
+      @include font_color($color: "$1-color-1", $opacity: 0.25);
+      @include placeholder_color($color: "$1-color-1", $opacity: 0.25);
+    }
+    .el-input-number__decrease, .el-input-number__increase {
+      @include border_color($color: "$1-color-1", $opacity: 0.15);
+      @include font_color($color: "$1-color-1", $opacity: 0.25);
+    }
   }
 }

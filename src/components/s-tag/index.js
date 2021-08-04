@@ -1,4 +1,4 @@
-import Tag from './src/tag'
+import Tag from './src/tag.vue'
 
 Tag.install = function (Vue) {
   Vue.component(Tag.name, Tag)

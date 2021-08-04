@@ -17,4 +17,28 @@
     padding: 4px 7px;
     font-size: 14px;
   }
+  &.s-radio-group--small {
+    .s-radio {
+      font-size: 14px;
+      .el-radio__label {
+        font-size: 14px;
+      }
+      .el-radio__inner {
+        width: 14px;
+        height: 14px;
+      }
+    }
+  }
+  &.s-radio-group--mini {
+    .s-radio {
+      font-size: 14px;
+      .el-radio__label {
+        font-size: 14px;
+      }
+      .el-radio__inner {
+        width: 12px;
+        height: 12px;
+      }
+    }
+  }
 }

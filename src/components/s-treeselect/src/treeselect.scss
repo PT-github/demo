@@ -72,28 +72,32 @@
     }
   }
   &.s-treeselect--mini {
-    font-size: 12px;
+    font-size: 14px;
     .vue-treeselect__placeholder, .vue-treeselect__single-value {
-      line-height: 26px !important;
+      line-height: 22px !important;
     }
     .vue-treeselect__control {
-      height: 28px;
+      height: 24px;
     }
     &.vue-treeselect--has-value .vue-treeselect__multi-value {
-      margin-bottom: 1px;
+      margin-bottom: 0;
     }
     .vue-treeselect__multi-value-item-container {
-      padding-top: 2px;
+      padding-top: 0;
     }
     .vue-treeselect__multi-value-item {
-      height: 22px;
-      line-height: 20px;
+      height: 20px;
+      line-height: 18px;
     }
     &.vue-treeselect--searchable.vue-treeselect--multi.vue-treeselect--has-value .vue-treeselect__input-container {
-      padding-top: 2px;
+      padding-top: 0;
     }
     .vue-treeselect__multi-value-item {
       padding: 0;
+    }
+    &.vue-treeselect--multi .vue-treeselect__input {
+      padding-top: 2px;
+      padding-bottom: 1px;
     }
   }
   .vue-treeselect__single-value {
@@ -136,9 +140,9 @@
   }
   &.vue-treeselect--disabled {
     .vue-treeselect__control {
-      background-color: #f5f7fa;
-      border-color: #e4e7ed;
-      color: #c0c4cc;
+      @include background_color($color: "$1-color-1", $opacity: 0.04);
+      @include border_color($color: "$1-color-1", $opacity: 0.15);
+      @include font_color($color: "$1-color-1", $opacity: 0.25);
       cursor: not-allowed;
     }
   }

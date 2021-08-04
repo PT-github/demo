@@ -109,7 +109,7 @@
 ### 尺寸
 
 适用广泛的基础多选
-:::demo  可通过 `size` 属性指定输入框的尺寸，除了默认的大小外，还提供了 small 和 mini 两种尺寸。
+:::demo  可通过 `size` 属性指定输入框的尺寸，除了默认的大小外，还提供了 `medium` 、 `small` 和 `mini` 三种尺寸。
 ```html
 <template>
   <div class="demo-size">

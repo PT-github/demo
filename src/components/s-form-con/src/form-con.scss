@@ -20,6 +20,9 @@
       clear: both;
     }
   }
+  .el-form-item__label {
+    font-size: 16px;
+  }
   .el-form-item__content {
     line-height: 0;
     .field_text {
@@ -35,63 +38,85 @@
       padding: 0;
     }
     .s-checkbox-con {
+      padding-top: 12px;
+    }
+    .s-switch {
       padding-top: 9px;
     }
-    .s-rate, .s-switch {
-      padding-top: 10px;
-    }
     .el-slider__runway {
-      margin: 17px 0;
+      margin: 18px 0;
+    }
+    .s-rate {
+      padding-top: 10px;
     }
   }
   .el-form-item--medium {
+    .el-form-item__label {
+      font-size: 16px;
+    }
     .el-form-item__content {
       line-height: 0;
       .field_text {
         line-height: 36px;
       }
       .s-radio-group:not(.s-radio-con_button) {
-        padding-top: 10px;
+        padding-top: 9px;
       }
       .s-checkbox-con {
-        padding-top: 7px;
+        padding-top: 10px;
       }
-      .s-rate, .s-switch {
+      .s-rate {
         padding-top: 8px;
       }
+      .s-switch {
+        padding-top: 7px;
+      }
       .el-slider__runway {
-        margin: 14px 0;
+        margin: 16px 0;
+      }
+
+      .el-tag {
+        margin-top: 4px;
       }
     }
   }
   .el-form-item--small {
+    .el-form-item__label {
+      font-size: 14px;
+    }
     .el-form-item__content {
       line-height: 0;
       .field_text {
         line-height: 32px;
       }
       .s-radio-group:not(.s-radio-con_button) {
-        padding-top: 6px;
+        padding-top: 8px;
       }
       .s-checkbox-con {
-        padding-top: 3px;
+        padding-top: 9px;
       }
       .s-rate, .s-switch {
         padding-top: 6px;
       }
       .el-slider__runway {
-        margin: 13px 0;
+        margin: 14px 0;
+      }
+      .el-tag {
+        margin-top: 4px;
       }
     }
   }
   .el-form-item--mini {
+    .el-form-item__label {
+      font-size: 14px;
+    }
     .el-form-item__content {
       line-height: 0;
       .field_text {
-        line-height: 28px;
+        line-height: 24px;
       }
       .s-radio-group:not(.s-radio-con_button) {
-        padding-top: 7px;
+        padding-top: 5px;
       }
       .s-checkbox-con {
         padding-top: 5px;
@@ -100,7 +125,10 @@
         padding-top: 4px;
       }
       .el-slider__runway {
-        margin: 11px 0;
+        margin: 10px 0;
+      }
+      .el-tag {
+        margin-top: 2px;
       }
     }
   }

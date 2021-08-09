@@ -38,7 +38,7 @@ export default {
   },
   created () {
     this.modelValue = this.valueType === 'string' ?
-      (this.value ? this.value.split(this.delimiter) : []) : []
+      (this.value ? this.value.split(this.delimiter) : []) : this.value
   },
   render () {
     return (

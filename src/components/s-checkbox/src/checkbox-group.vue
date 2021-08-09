@@ -15,7 +15,6 @@ export default {
   render () {
     return (
       <el-checkbox-group
-        class="s-checkbox-group"
         class={
           [
             's-checkbox-group',
@@ -24,7 +23,10 @@ export default {
         }
         {
           ...{
-            attrs: {...this.$attrs},
+            attrs: {
+              size: this.size,
+              ...this.$attrs
+            },
             on: {...this.$listeners}
           }
         }>

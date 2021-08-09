@@ -4,6 +4,7 @@
   .el-checkbox-button__inner{
     @include font_color($color: '$1-color-1', $opacity:.65);
     font-size: 16px;
+    padding: 11px 20px;
   }
   .el-checkbox-button.is-checked .el-checkbox-button__inner{
     @include font_color($color: '$0-color-1');
@@ -14,8 +15,8 @@
   //   vertical-align: middle;
   // }
   .el-checkbox-button--medium .el-checkbox-button__inner{
-    font-size: 14px;
-    // padding: 8px 16px;
+    font-size: 16px;
+    padding: 9px 16px;
   }
   .el-checkbox-button--small .el-checkbox-button__inner{
     font-size: 14px;

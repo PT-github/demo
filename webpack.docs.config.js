@@ -2,7 +2,7 @@
  * @Author: PT
  * @Date: 2021-05-27 08:49:43
  * @LastEditors: PT
- * @LastEditTime: 2021-07-21 10:17:01
+ * @LastEditTime: 2021-08-11 11:10:01
  * @Description: file content
  */
 const path = require('path')
@@ -103,6 +103,7 @@ module.exports = async function () {
     // 设置缓存，改善构建速度
     cache: {
       type: 'filesystem',
+      cacheDirectory: path.resolve(__dirname, './node_modules/.docs_cache'),
       buildDependencies: {
         config: [__filename]
       }
